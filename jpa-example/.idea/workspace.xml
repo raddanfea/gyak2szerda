@@ -33,9 +33,10 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1aa7cOwTcMaksZ3h6QsArW4NTvv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -79,7 +80,7 @@
       <updated>1586961930008</updated>
       <workItem from="1586961933532" duration="2390000" />
       <workItem from="1587305879010" duration="32000" />
-      <workItem from="1587771028232" duration="5940000" />
+      <workItem from="1587771028232" duration="6439000" />
     </task>
     <task id="LOCAL-00001" summary="JPA + Java Faker">
       <created>1587775902142</created>
