@@ -1,13 +1,16 @@
 package characters;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 import javax.xml.bind.annotation.*;
 import lombok.Data;
 import lombok.Getter;
+import lombok.Setter;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(propOrder = {"name","level","race","age","gender","rpgclass","skills"})
+@XmlType(propOrder = {"name","level","race","age","gender","rpgclass","skills","items","stats"})
 @Data
 public class CharacterBase {
 
@@ -23,7 +26,6 @@ public class CharacterBase {
     private Gender gender;
 
     private Rpgclass rpgclass;
-
     public Rpgclass getRpgclass() {
         return rpgclass;
     }
@@ -31,6 +33,14 @@ public class CharacterBase {
     @XmlElementWrapper(name = "skills")
     @XmlElement(name = "skill")
     private List<Skills> skills;
+
+    @XmlElementWrapper(name = "items")
+    @XmlElement(name = "item")
+    private Set<String> items;
+
+    @XmlElementWrapper(name = "stats")
+    @XmlElement(name = "stat")
+    private ArrayList<Stats> stats;
 
     @XmlEnum
     public static enum  Gender {
@@ -48,5 +58,28 @@ public class CharacterBase {
     }
 
 
+    public String getName() { return name;  }
+
+    public Integer getLevel() { return level; }
+
+    public Race getRace() { return race;   }
+
+    public Integer getAge() { return age; }
+
+    public Gender getGender() { return gender;   }
+
+
+
+    public List<Skills> getSkills() {
+        return skills;
+    }
+
+    public Set<String> getItems() {
+        return items;
+    }
+
+    public ArrayList<Stats> getStats() {
+        return stats;
+    }
 }
 

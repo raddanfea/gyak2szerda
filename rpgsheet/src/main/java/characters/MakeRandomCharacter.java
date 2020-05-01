@@ -3,10 +3,9 @@ package characters;
 
 import com.github.javafaker.Faker;
 import helpers.ClassSkills;
-import lombok.extern.flogger.Flogger;
 import org.tinylog.Logger;
-
 import java.util.ArrayList;
+import java.util.Set;
 
 public class MakeRandomCharacter {
 
@@ -24,6 +23,16 @@ public class MakeRandomCharacter {
 
         ActiveChar.setRpgclass(faker.options().option(CharacterBase.Rpgclass.values()));
         ActiveChar.setSkills(ClassSkills.GetSkills(faker.options().option(CharacterBase.Rpgclass.values())));
+
+        ActiveChar.setItems((Set.of("Starting Items")));
+
+        ArrayList<Stats> statsbuffer = new ArrayList<>();
+
+        for (Stats.Stattypes iteredtype : Stats.Stattypes.values()){
+            statsbuffer.add(new Stats(iteredtype.toString(),faker.number().numberBetween(-2,6)+10));
+        }
+
+        ActiveChar.setStats(statsbuffer);
 
         Logger.trace("Random Character Generated.");
 

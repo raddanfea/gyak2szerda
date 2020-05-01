@@ -63,6 +63,18 @@
             <version>2.3.2</version>
             <scope>runtime</scope>
         </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>11.0.2</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>11.0.2</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -75,14 +87,6 @@
                     <release>13</release>
                     <source>13</source>
                     <target>13</target>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.openjfx</groupId>
-                <artifactId>javafx-maven-plugin</artifactId>
-                <version>0.0.2</version>
-                <configuration>
-                    <mainClass>${exec.mainClass}</mainClass>
                 </configuration>
             </plugin>
             <plugin>

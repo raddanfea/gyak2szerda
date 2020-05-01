@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<characterBase name="Shirleen Denesik">
-    <level>4</level>
-    <race>Dwarf</race>
-    <age>24</age>
+<characterBase name="Karren Schumm">
+    <level>15</level>
+    <race>Human</race>
+    <age>36</age>
     <gender>Male</gender>
     <rpgclass>Mage</rpgclass>
     <skills>
@@ -22,4 +22,33 @@
             <uses>2</uses>
         </skill>
     </skills>
+    <items>
+        <item>Starting Items</item>
+    </items>
+    <stats>
+        <stat>
+            <name>Strength</name>
+            <value>8</value>
+        </stat>
+        <stat>
+            <name>Dexterity</name>
+            <value>12</value>
+        </stat>
+        <stat>
+            <name>Constitution</name>
+            <value>11</value>
+        </stat>
+        <stat>
+            <name>Intelligence</name>
+            <value>8</value>
+        </stat>
+        <stat>
+            <name>Wisdom</name>
+            <value>12</value>
+        </stat>
+        <stat>
+            <name>Charisma</name>
+            <value>11</value>
+        </stat>
+    </stats>
 </characterBase>
