@@ -3,9 +3,6 @@ package characters;
 import java.util.List;
 import javax.xml.bind.annotation.*;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
-import java.util.List;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)

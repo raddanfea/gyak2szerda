@@ -2,6 +2,7 @@ package characters;
 
 
 import com.github.javafaker.Faker;
+import org.tinylog.Logger;
 
 public class MakeRandomCharacter {
 
@@ -14,6 +15,8 @@ public class MakeRandomCharacter {
         ActiveChar.setAge(faker.number().numberBetween(15,60));
         ActiveChar.setGender(faker.options().option(CharacterBase.Gender.values()));
         ActiveChar.setRpgclass(faker.options().option(CharacterBase.Rpgclass.values()));
+
+        Logger.trace("Random Character Generated, Returning");
 
         return ActiveChar;
     }

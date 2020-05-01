@@ -11,16 +11,14 @@ import java.util.ArrayList;
 
 
 public class Main {
-    public static void main(String[] args) throws Exception{
-
+    public static void main(String[] args){
 
 
         CharacterBase ActiveChar = new MakeRandomCharacter().MakeRandomCharacter();
 
-        CharSaver.save(ActiveChar,"Random");
+        CharSaver.save(ActiveChar,"random");
 
         Logger.trace(ActiveChar);
-
 
     }
 }

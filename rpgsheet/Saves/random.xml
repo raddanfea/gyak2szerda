@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<characterBase name="Birgit Grant">
-    <level>16</level>
-    <age>44</age>
+<characterBase name="Ka Schneider III">
+    <level>3</level>
+    <age>18</age>
     <gender>FEMALE</gender>
     <rpgclass>Warrior</rpgclass>
 </characterBase>
