@@ -9,7 +9,7 @@ import java.util.List;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(propOrder = {"name","level","age","gender","rpgclass","profession","skills"})
+@XmlType(propOrder = {"name","level","age","gender","rpgclass","skills"})
 @Data
 public class CharacterBase {
 
@@ -18,17 +18,25 @@ public class CharacterBase {
 
     private Integer level;
 
-    private String rpgclass;
-
     private Integer age;
 
-    private String gender;
+    private Gender gender;
 
-    private String profession;
+    private Rpgclass rpgclass;
 
     @XmlElementWrapper(name = "skills")
     @XmlElement(name = "skill")
     private List<Skills> skills;
+
+    @XmlEnum
+    public static enum  Gender {
+        FEMALE, MALE;
+    }
+
+    @XmlEnum
+    public static enum  Rpgclass {
+        Warrior, Mage;
+    }
 
 
 }

@@ -1,2 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<characterBase name="Mr. Luisa Bogisich"/>
+<characterBase name="Birgit Grant">
+    <level>16</level>
+    <age>44</age>
+    <gender>FEMALE</gender>
+    <rpgclass>Warrior</rpgclass>
+</characterBase>

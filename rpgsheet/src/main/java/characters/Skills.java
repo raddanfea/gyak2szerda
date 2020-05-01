@@ -1,10 +1,8 @@
 package characters;
 
 import lombok.Data;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlValue;
+
+import javax.xml.bind.annotation.*;
 
 
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -16,6 +14,7 @@ public class Skills {
 
     @XmlAttribute
     private String effect;
+
 
     public Skills() {}
 
