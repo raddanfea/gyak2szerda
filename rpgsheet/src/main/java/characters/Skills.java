@@ -9,17 +9,19 @@ import javax.xml.bind.annotation.*;
 @Data
 public class Skills {
 
-    @XmlValue
+
+
     private String name;
 
-    @XmlAttribute
     private String effect;
+    private Integer uses;
 
 
     public Skills() {}
 
-    public Skills(String name, String effect) {
+    public Skills(String name, Integer uses, String effect) {
         this.name = name;
+        this.uses = uses;
         this.effect = effect;
     }
 }

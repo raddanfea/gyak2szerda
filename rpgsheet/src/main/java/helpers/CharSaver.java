@@ -19,7 +19,7 @@ public class CharSaver{
             Logger.trace("Character Saved to file at {}", output);
         }
         catch(JAXBException | FileNotFoundException e){
-            Logger.trace("Character could not be saved.");
+            Logger.error("Character could not be saved.\n{}",e);
         }
     }
 }

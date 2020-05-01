@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<characterBase name="Ka Schneider III">
-    <level>3</level>
-    <age>18</age>
-    <gender>FEMALE</gender>
-    <rpgclass>Warrior</rpgclass>
+<characterBase name="Shirleen Denesik">
+    <level>4</level>
+    <race>Dwarf</race>
+    <age>24</age>
+    <gender>Male</gender>
+    <rpgclass>Mage</rpgclass>
+    <skills>
+        <skill>
+            <name>Warrior Skill 1</name>
+            <effect>Effect 1</effect>
+            <uses>2</uses>
+        </skill>
+        <skill>
+            <name>Warrior Skill 2</name>
+            <effect>Effect 2</effect>
+            <uses>2</uses>
+        </skill>
+        <skill>
+            <name>Warrior Skill 3</name>
+            <effect>Effect 2</effect>
+            <uses>2</uses>
+        </skill>
+    </skills>
 </characterBase>

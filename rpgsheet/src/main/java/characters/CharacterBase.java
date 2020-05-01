@@ -3,10 +3,11 @@ package characters;
 import java.util.List;
 import javax.xml.bind.annotation.*;
 import lombok.Data;
+import lombok.Getter;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(propOrder = {"name","level","age","gender","rpgclass","skills"})
+@XmlType(propOrder = {"name","level","race","age","gender","rpgclass","skills"})
 @Data
 public class CharacterBase {
 
@@ -15,11 +16,17 @@ public class CharacterBase {
 
     private Integer level;
 
+    private Race race;
+
     private Integer age;
 
     private Gender gender;
 
     private Rpgclass rpgclass;
+
+    public Rpgclass getRpgclass() {
+        return rpgclass;
+    }
 
     @XmlElementWrapper(name = "skills")
     @XmlElement(name = "skill")
@@ -27,7 +34,12 @@ public class CharacterBase {
 
     @XmlEnum
     public static enum  Gender {
-        FEMALE, MALE;
+        Female, Male;
+    }
+
+    @XmlEnum
+    public static enum  Race {
+        Human, Elf, Dwarf, Thiefling;
     }
 
     @XmlEnum
