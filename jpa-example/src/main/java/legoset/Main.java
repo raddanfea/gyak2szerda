@@ -5,18 +5,14 @@ import java.time.Year;
 import java.time.ZoneId;
 import java.util.List;
 import java.util.Date;
-
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-
 import com.github.javafaker.Faker;
-import legoset.model.LegoSet;
-
 import lombok.extern.log4j.Log4j2;
 import person.Address;
 import person.Person;
+import legoset.model.LegoSet;
 
 @Log4j2
 public class Main {

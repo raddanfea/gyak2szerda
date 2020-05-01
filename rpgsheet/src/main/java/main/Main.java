@@ -1,12 +1,24 @@
 package main;
+
+import characters.CharacterBase;
+import characters.MakeRandomCharacter;
+import com.github.javafaker.Faker;
+import helpers.CharSaver;
 import org.tinylog.Logger;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.util.ArrayList;
+
 
 public class Main {
-    public static void main(String[] args) {
-        Logger.error("I'm a TEST error, IGNORE me!");
-        Logger.warn("I'm a TEST warn, IGNORE me!");
-        Logger.info("I'm a TEST info, IGNORE me!");
-        Logger.debug("I'm a TEST debug, IGNORE me!");
-        Logger.trace("I'm a TEST trace, IGNORE me!");
+    public static void main(String[] args) throws Exception{
+
+
+
+        CharacterBase ActiveChar = new MakeRandomCharacter().MakeRandomCharacter();
+
+        CharSaver.save(ActiveChar,"Random");
+
+
     }
 }
