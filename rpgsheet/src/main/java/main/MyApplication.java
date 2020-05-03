@@ -13,6 +13,7 @@ public class MyApplication extends Application {
         stage.setTitle("Hello world");
         stage.setResizable(false);
         stage.setScene(new Scene(root));
+        root.getStylesheets().add("/css/stylesheet.css");
         stage.show();
     }
 }

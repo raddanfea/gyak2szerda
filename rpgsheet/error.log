@@ -51,3 +51,17 @@ ERROR: Character could not be loaded.
 ERROR: No lastSave found, generating random placeholder.
 2020-05-03 13:07:16 [JavaFX Application Thread] controller.CharScreenController.refreshToXML()
 ERROR: CharacterSaveLogic Failed. Invalid Values?
+2020-05-03 14:15:35 [JavaFX Application Thread] helpers.CharacterSaveLogic.SaveLogic()
+ERROR: CharacterSaveLogic Failed. Invalid Values?
+2020-05-03 14:19:38 [JavaFX Application Thread] helpers.CharSaver.load()
+ERROR: Character could not be loaded. Generating Random Character to return.
+2020-05-03 14:25:16 [JavaFX Application Thread] helpers.CharSaver.load()
+ERROR: Character Saves/lastSave.xml not loaded because it could no be found.
+2020-05-03 14:28:48 [JavaFX Application Thread] helpers.CharSaver.load()
+ERROR: Character Saves/lastSave.xml not loaded because it could no be found.
+2020-05-03 14:28:48 [JavaFX Application Thread] helpers.CharSaver.load()
+ERROR: Saves/lastSave.xml is missing, therefore returning a random character.
+2020-05-03 14:35:32 [JavaFX Application Thread] helpers.CharSaver.load()
+ERROR: Character Saves/lastSave.xml not loaded because it could no be found.
+2020-05-03 14:35:32 [JavaFX Application Thread] helpers.CharSaver.load()
+ERROR: Saves/lastSave.xml is missing, therefore returning a random character.

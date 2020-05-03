@@ -1,6 +1,7 @@
 package helpers;
 
 import characters.CharacterBase;
+import characters.MakeRandomCharacter;
 import jaxb.JAXBHelper;
 import org.tinylog.Logger;
 
@@ -35,7 +36,11 @@ public class CharSaver{
             Logger.trace("Character Loaded from file at {}", input);
         }
         catch(JAXBException | FileNotFoundException e){
-            Logger.error("Character could not be loaded.");
+            Logger.error("Character {} not loaded because it could no be found.", input);
+            if(filename.equals("lastSave")) {
+                ActiveChar = new MakeRandomCharacter().MakeRandomCharacter();
+                Logger.error("{} is missing, therefore returning a random character.", input);
+            }
         }
         return ActiveChar;}
 

@@ -73,13 +73,7 @@ public class CharScreenController {
             }
         });
 
-        try {
             ActiveChar = CharSaver.load("lastSave");
-        }
-        catch (Exception e){
-            Logger.error("No lastSave found, generating random placeholder.");
-            ActiveChar = new MakeRandomCharacter().MakeRandomCharacter();
-        }
         refresh();
     }
 
@@ -129,6 +123,7 @@ public class CharScreenController {
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/test.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root));
+        root.getStylesheets().add("/css/stylesheet.css");
         stage.show();
     }
 }

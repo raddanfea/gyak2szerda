@@ -20,6 +20,7 @@ public class LoadScreen {
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/CharScreen.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root));
+        root.getStylesheets().add("/css/stylesheet.css");
         stage.show();
     }
 }
