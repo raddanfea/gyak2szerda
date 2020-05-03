@@ -30,17 +30,31 @@ public class CharacterBase {
         return rpgclass;
     }
 
+
     @XmlElementWrapper(name = "skills")
     @XmlElement(name = "skill")
     private List<Skills> skills;
 
+    public List<Skills> getSkillsList(){
+        return skills;
+    }
+
+
     @XmlElementWrapper(name = "items")
     @XmlElement(name = "item")
     private Set<String> items;
+    public Set<String> getItems() {
+        return items;
+    }
 
     @XmlElementWrapper(name = "stats")
     @XmlElement(name = "stat")
     private ArrayList<Stats> stats;
+    public ArrayList<Stats> getStats() {
+        return stats;
+    }
+
+
 
     @XmlEnum
     public static enum  Gender {
@@ -68,18 +82,5 @@ public class CharacterBase {
 
     public Gender getGender() { return gender;   }
 
-
-
-    public List<Skills> getSkills() {
-        return skills;
-    }
-
-    public Set<String> getItems() {
-        return items;
-    }
-
-    public ArrayList<Stats> getStats() {
-        return stats;
-    }
 }
 

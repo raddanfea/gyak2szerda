@@ -1,25 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<characterBase name="Karren Schumm">
-    <level>15</level>
+<characterBase name="Salvatore Ebert">
+    <level>20</level>
     <race>Human</race>
-    <age>36</age>
-    <gender>Male</gender>
-    <rpgclass>Mage</rpgclass>
+    <age>115</age>
+    <gender>Female</gender>
+    <rpgclass>Warrior</rpgclass>
     <skills>
         <skill>
             <name>Warrior Skill 1</name>
             <effect>Effect 1</effect>
-            <uses>2</uses>
         </skill>
         <skill>
             <name>Warrior Skill 2</name>
             <effect>Effect 2</effect>
-            <uses>2</uses>
         </skill>
         <skill>
             <name>Warrior Skill 3</name>
-            <effect>Effect 2</effect>
-            <uses>2</uses>
+            <effect>Effect 3</effect>
+        </skill>
+        <skill>
+            <name>Warrior Skill 4</name>
+            <effect>Effect 4</effect>
+        </skill>
+        <skill>
+            <name>Warrior Skill 5</name>
+            <effect>Effect 5</effect>
+        </skill>
+        <skill>
+            <name>Warrior Skill 6</name>
+            <effect>Effect 6</effect>
+        </skill>
+        <skill>
+            <name>Warrior Skill 7</name>
+            <effect>Effect 7</effect>
         </skill>
     </skills>
     <items>
@@ -28,23 +41,23 @@
     <stats>
         <stat>
             <name>Strength</name>
-            <value>8</value>
+            <value>13</value>
         </stat>
         <stat>
             <name>Dexterity</name>
-            <value>12</value>
+            <value>13</value>
         </stat>
         <stat>
             <name>Constitution</name>
-            <value>11</value>
+            <value>14</value>
         </stat>
         <stat>
             <name>Intelligence</name>
-            <value>8</value>
+            <value>12</value>
         </stat>
         <stat>
             <name>Wisdom</name>
-            <value>12</value>
+            <value>9</value>
         </stat>
         <stat>
             <name>Charisma</name>

@@ -16,13 +16,16 @@ public class MakeRandomCharacter {
 
         CharacterBase ActiveChar = new CharacterBase();
         ActiveChar.setName(faker.name().fullName());
-        ActiveChar.setLevel(faker.number().numberBetween(1,20));
-        ActiveChar.setAge(faker.number().numberBetween(15,60));
+
+        int lvlbuffer = faker.number().numberBetween(1,20);
+        ActiveChar.setLevel(lvlbuffer);
+
+        ActiveChar.setAge(faker.number().numberBetween(150,200) * lvlbuffer / 20);
         ActiveChar.setGender(faker.options().option(CharacterBase.Gender.values()));
         ActiveChar.setRace(faker.options().option(CharacterBase.Race.values()));
 
         ActiveChar.setRpgclass(faker.options().option(CharacterBase.Rpgclass.values()));
-        ActiveChar.setSkills(ClassSkills.GetSkills(faker.options().option(CharacterBase.Rpgclass.values())));
+        ActiveChar.setSkills(ClassSkills.GetSkills(faker.options().option(CharacterBase.Rpgclass.values()),lvlbuffer));
 
         ActiveChar.setItems((Set.of("Starting Items")));
 

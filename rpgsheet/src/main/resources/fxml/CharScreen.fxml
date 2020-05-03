@@ -3,22 +3,24 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CharScreenController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CharScreenController">
    <children>
-      <TextField fx:id="nameTxf" layoutX="34.0" layoutY="41.0" prefHeight="26.0" prefWidth="204.0" text="Name" />
-      <TextField fx:id="raceTxf" layoutX="34.0" layoutY="106.0" prefHeight="26.0" prefWidth="89.0" text="Race" />
-      <TextField fx:id="classTxf" layoutX="149.0" layoutY="106.0" prefHeight="26.0" prefWidth="89.0" text="Class" />
-      <TextField fx:id="levelTxf" layoutX="267.0" layoutY="106.0" prefHeight="26.0" prefWidth="70.0" text="Level" />
-      <TextField fx:id="ageTxf" layoutX="265.0" layoutY="41.0" prefHeight="26.0" prefWidth="70.0" text="Age" />
-      <TextArea fx:id="skillTxf" layoutX="36.0" layoutY="169.0" prefHeight="200.0" prefWidth="200.0" text="Skills" />
-      <TextArea fx:id="itemTxf" layoutX="271.0" layoutY="169.0" prefHeight="200.0" prefWidth="129.0" text="Items" />
-      <Button fx:id="randomButton" layoutX="470.0" layoutY="41.0" mnemonicParsing="false" onAction="#randomCharGenSet" prefHeight="26.0" prefWidth="96.0" text="Random" />
-      <ChoiceBox id="genderChoice" fx:id="genderChoice" layoutX="356.0" layoutY="106.0" prefHeight="26.0" prefWidth="89.0" />
-      <Button layoutX="537.0" layoutY="343.0" mnemonicParsing="false" onAction="#goBack" text="&lt;" />
-      <Label layoutX="36.0" layoutY="14.0" prefHeight="16.0" prefWidth="70.0" text="Name" />
-      <Label layoutX="265.0" layoutY="14.0" prefHeight="16.0" prefWidth="37.0" text="Age" />
-      <Label layoutX="36.0" layoutY="81.0" prefHeight="16.0" prefWidth="50.0" text="Race" />
-      <Label layoutX="149.0" layoutY="81.0" prefHeight="16.0" prefWidth="50.0" text="Class" />
-      <Label layoutX="266.0" layoutY="81.0" prefHeight="16.0" prefWidth="50.0" text="Level" />
+      <TextField fx:id="nameTxf" layoutX="45.0" layoutY="55.0" prefHeight="26.0" prefWidth="204.0" text="Name" />
+      <TextField fx:id="levelTxf" layoutX="280.0" layoutY="132.0" prefHeight="26.0" prefWidth="70.0" text="Level" />
+      <TextField fx:id="ageTxf" layoutX="280.0" layoutY="54.0" prefHeight="26.0" prefWidth="70.0" text="Age" />
+      <TextArea fx:id="itemTxf" layoutX="581.0" layoutY="304.0" prefHeight="230.0" prefWidth="272.0" text="Items" />
+      <Button fx:id="randomButton" layoutX="866.0" layoutY="451.0" mnemonicParsing="false" onAction="#randomCharGenSet" prefHeight="46.0" prefWidth="89.0" text="Random" />
+      <ChoiceBox id="genderChoice" fx:id="genderChoice" layoutX="381.0" layoutY="132.0" prefHeight="26.0" prefWidth="89.0" />
+      <Button layoutX="896.0" layoutY="521.0" mnemonicParsing="false" onAction="#goBack" text="&lt;" />
+      <Label layoutX="36.0" layoutY="15.0" prefHeight="26.0" prefWidth="81.0" text="Name" />
+      <Label layoutX="280.0" layoutY="15.0" prefHeight="26.0" prefWidth="50.0" text="Age" />
+      <Label layoutX="381.0" layoutY="15.0" prefHeight="26.0" prefWidth="57.0" text="Race" />
+      <Label layoutX="158.0" layoutY="93.0" prefHeight="26.0" prefWidth="57.0" text="Class" />
+      <Label layoutX="280.0" layoutY="93.0" prefHeight="26.0" prefWidth="50.0" text="Level" />
+      <Label layoutX="381.0" layoutY="98.0" text="Sex" />
+      <ChoiceBox fx:id="classChoice" layoutX="158.0" layoutY="132.0" prefHeight="26.0" prefWidth="89.0" />
+      <ChoiceBox fx:id="raceChoice" layoutX="381.0" layoutY="54.0" prefHeight="26.0" prefWidth="89.0" />
+      <Button layoutX="880.0" layoutY="406.0" mnemonicParsing="false" onAction="#refreshToXML" text="SAVE" />
+      <Label fx:id="skillsTxf" alignment="TOP_LEFT" layoutX="350.0" layoutY="240.0" prefHeight="294.0" prefWidth="204.0" text="Skills" />
    </children>
 </Pane>
