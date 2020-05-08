@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<characterBase name="Ms. Winston Hettinger">
-    <level>12</level>
-    <race>Elf</race>
-    <age>95</age>
-    <gender>Female</gender>
+<characterBase name="New Character">
+    <level>5</level>
+    <race>Dwarf</race>
+    <age>166</age>
+    <gender>Male</gender>
     <rpgclass>Warrior</rpgclass>
     <skills>
         <skill>
@@ -34,6 +34,14 @@
             <name>Warrior Skill 7</name>
             <effect>Effect 7</effect>
         </skill>
+        <skill>
+            <name>Warrior Skill 8</name>
+            <effect>Effect 8</effect>
+        </skill>
+        <skill>
+            <name>Warrior Skill 9</name>
+            <effect>Effect 9</effect>
+        </skill>
     </skills>
     <items>
         <item>Starting Items</item>
@@ -42,19 +50,19 @@
     <stats>
         <stat>
             <name>Strength</name>
-            <value>10</value>
+            <value>12</value>
         </stat>
         <stat>
             <name>Dexterity</name>
-            <value>11</value>
+            <value>8</value>
         </stat>
         <stat>
             <name>Constitution</name>
-            <value>9</value>
+            <value>10</value>
         </stat>
         <stat>
             <name>Intelligence</name>
-            <value>10</value>
+            <value>11</value>
         </stat>
         <stat>
             <name>Wisdom</name>
@@ -62,7 +70,7 @@
         </stat>
         <stat>
             <name>Charisma</name>
-            <value>11</value>
+            <value>12</value>
         </stat>
     </stats>
 </characterBase>

@@ -34,7 +34,6 @@ public class CharacterBase {
     @XmlElementWrapper(name = "skills")
     @XmlElement(name = "skill")
     private List<Skills> skills;
-
     public List<Skills> getSkillsList(){
         return skills;
     }
@@ -42,8 +41,8 @@ public class CharacterBase {
 
     @XmlElementWrapper(name = "items")
     @XmlElement(name = "item")
-    private Set<String> items;
-    public Set<String> getItems() {
+    private List<String> items;
+    public List<String> getItems() {
         return items;
     }
 
@@ -53,7 +52,6 @@ public class CharacterBase {
     public ArrayList<Stats> getStats() {
         return stats;
     }
-
 
 
     @XmlEnum

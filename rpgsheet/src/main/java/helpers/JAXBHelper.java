@@ -1,4 +1,4 @@
-package jaxb;
+package helpers;
 
 import characters.CharacterBase;
 

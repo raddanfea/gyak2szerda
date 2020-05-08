@@ -26,7 +26,6 @@ public class ClassSkills {
                     skills.add(new Skills("Warrior Skill 6", "Effect 6"));
                     skills.add(new Skills("Warrior Skill 7", "Effect 7"));
                 }
-
                 if(level > 15){
                     skills.add(new Skills("Warrior Skill 8", "Effect 8"));
                     skills.add(new Skills("Warrior Skill 9", "Effect 9"));

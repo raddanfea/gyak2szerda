@@ -1,15 +1,13 @@
 package controller;
 
 import characters.CharacterBase;
-import characters.MakeRandomCharacter;
-import characters.Stats;
+import helpers.MakeRandomCharacter;
 import helpers.CharSaver;
 import helpers.CharacterSaveLogic;
 import helpers.ClassSkills;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -17,17 +15,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-import jaxb.JAXBHelper;
 import org.tinylog.Logger;
-
-import javax.swing.text.StyleContext;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Set;
 
 public class CharScreenController {
+
+    private CharacterBase ActiveChar;
+    private String loadedCharName;
 
     @FXML
     private TextField nameTxf;
@@ -35,16 +29,15 @@ public class CharScreenController {
     @FXML
     private TextField ageTxf;
 
+    @FXML
+    private TextArea itemsTxf;
 
     @FXML
     private TextField levelTxf;
 
-
     @FXML
     private Label skillsTxf;
 
-    @FXML
-    private TextField itemsTxf;
 
     @FXML
     private ChoiceBox<Enum> genderChoice;
@@ -55,14 +48,26 @@ public class CharScreenController {
     @FXML
     private ChoiceBox<Enum> raceChoice;
 
-    private CharacterBase ActiveChar;
-
 
     public void initialize() {
 
         raceChoice.getItems().addAll(CharacterBase.Race.values());
+        raceChoice.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
+            @Override
+            public void changed(ObservableValue<? extends Number> observableValue, Number number, Number number2) {
+                ActiveChar.setRace(CharacterBase.Race.valueOf(raceChoice.getItems().get((Integer) number2).toString()));
+                refresh();
+            }
+        });
 
         genderChoice.getItems().addAll(CharacterBase.Gender.values());
+        genderChoice.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
+            @Override
+            public void changed(ObservableValue<? extends Number> observableValue, Number number, Number number2) {
+                ActiveChar.setGender(CharacterBase.Gender.valueOf(genderChoice.getItems().get((Integer) number2).toString()));
+                refresh();
+            }
+        });
 
         classChoice.getItems().addAll(CharacterBase.Rpgclass.values());
         classChoice.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
@@ -73,7 +78,12 @@ public class CharScreenController {
             }
         });
 
-            ActiveChar = CharSaver.load("lastSave");
+    }
+
+    public void initdata(String loadCharName) {
+
+        this.loadedCharName = loadCharName;
+        ActiveChar = CharSaver.load(loadedCharName);
         refresh();
     }
 
@@ -85,6 +95,7 @@ public class CharScreenController {
     }
 
 
+
     public void refresh(){
 
         nameTxf.setText(ActiveChar.getName());
@@ -94,12 +105,20 @@ public class CharScreenController {
         classChoice.setValue(ActiveChar.getRpgclass());
         raceChoice.setValue(ActiveChar.getRace());
         skillsTxf.setText(ClassSkills.SkillsToString(ClassSkills.GetSkills(ActiveChar.getRpgclass(),ActiveChar.getLevel())));
+        itemsTxf.setText(String.join(",", ActiveChar.getItems()).replace(",",",\n"));
 
         Logger.trace("Page refreshed.");
 
     }
 
-    public void refreshToXML(ActionEvent event) throws IOException {
+    public void saveButton(ActionEvent event)throws IOException {
+        refreshToFile();
+        Logger.trace("Save was manual.");
+    }
+
+    public void refreshToFile(){
+
+        Logger.trace("Saving to file...");
 
         CharacterSaveLogic.SaveLogic(
                 nameTxf.getText(),
@@ -109,10 +128,11 @@ public class CharScreenController {
                 raceChoice.getValue(),
                 classChoice.getValue(),
                 ActiveChar.getSkillsList(),
-                ActiveChar.getItems(),
+                itemsTxf.getText(),
                 ActiveChar.getStats());
 
-        Logger.trace("Save was manual.");
+        Logger.trace("Saved to file.");
+
         ActiveChar = CharSaver.load("lastSave");
         refresh();
     }
@@ -126,6 +146,7 @@ public class CharScreenController {
         root.getStylesheets().add("/css/stylesheet.css");
         stage.show();
     }
+
 }
 
 

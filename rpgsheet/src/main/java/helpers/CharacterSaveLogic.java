@@ -6,6 +6,7 @@ import characters.Stats;
 import org.tinylog.Logger;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 
@@ -17,7 +18,7 @@ public class CharacterSaveLogic {
                                  Enum racetosave,
                                  Enum rpgclasstosave,
                                  List<Skills> skillstosave,
-                                 Set<String> itemstosave,
+                                 String itemstosave,
                                  ArrayList<Stats> stattosave){
 
         try {
@@ -31,14 +32,14 @@ public class CharacterSaveLogic {
             ActiveChar.setRpgclass(CharacterBase.Rpgclass.valueOf(rpgclasstosave.toString()));
 
             ActiveChar.setSkills(skillstosave);
-            ActiveChar.setItems(itemstosave);
+            ActiveChar.setItems(Arrays.asList(itemstosave.replace("\n", "").split(",")));
             ActiveChar.setStats(stattosave);
 
             CharSaver.save(ActiveChar, "lastSave");
-            // CharSaver.save(ActiveChar,nametosave); //save file as name, disabled until needed
+            CharSaver.save(ActiveChar,nametosave);
         }
         catch (Exception e){
-            Logger.error("CharacterSaveLogic Failed. Invalid Values?");
+            Logger.error("CharacterSaveLogic Failed. Invalid Values?\n{}", e);
         }
     }
 }

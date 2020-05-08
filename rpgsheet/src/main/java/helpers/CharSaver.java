@@ -1,20 +1,17 @@
 package helpers;
 
 import characters.CharacterBase;
-import characters.MakeRandomCharacter;
-import jaxb.JAXBHelper;
 import org.tinylog.Logger;
 
 import javax.xml.bind.JAXBException;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.OutputStream;
 
 public class CharSaver{
     public static void save(Object o, String filename){
 
-        String output = "Saves/" + filename + ".xml"; //build filename
+        String output = "Saves/" + filename + ".xml"; /*build filename*/
 
         try {
             JAXBHelper.toXML(o, new FileOutputStream(output)); //throws to JAXBHelper
@@ -25,9 +22,10 @@ public class CharSaver{
             Logger.error("Character could not be saved.\n{}",e);
         }
     }
+
     public static CharacterBase load(String filename){
 
-        String input = "Saves/" + filename + ".xml"; //build filename
+        String input = "Saves/" + filename + ".xml"; /*build filename*/
         CharacterBase ActiveChar = null;
 
         try {
@@ -37,9 +35,10 @@ public class CharSaver{
         }
         catch(JAXBException | FileNotFoundException e){
             Logger.error("Character {} not loaded because it could no be found.", input);
-            if(filename.equals("lastSave")) {
+            if(filename == null) {
                 ActiveChar = new MakeRandomCharacter().MakeRandomCharacter();
-                Logger.error("{} is missing, therefore returning a random character.", input);
+                ActiveChar.setName("New Character");
+                Logger.error("Last Save is missing, therefore returning a random character.");
             }
         }
         return ActiveChar;}

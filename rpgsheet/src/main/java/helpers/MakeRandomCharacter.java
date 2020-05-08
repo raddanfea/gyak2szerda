@@ -1,10 +1,13 @@
-package characters;
+package helpers;
 
 
+import characters.CharacterBase;
+import characters.Stats;
 import com.github.javafaker.Faker;
 import helpers.ClassSkills;
 import org.tinylog.Logger;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 public class MakeRandomCharacter {
@@ -28,7 +31,7 @@ public class MakeRandomCharacter {
         ActiveChar.setRpgclass(faker.options().option(CharacterBase.Rpgclass.values()));
         ActiveChar.setSkills(ClassSkills.GetSkills(faker.options().option(CharacterBase.Rpgclass.values()),levelbuffer));
 
-        ActiveChar.setItems((Set.of("Starting Items")));
+        ActiveChar.setItems(List.of("Starting Items,Use Comma for New Line"));
 
         ArrayList<Stats> statsbuffer = new ArrayList<>();
 
