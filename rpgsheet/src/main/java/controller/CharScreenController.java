@@ -140,7 +140,7 @@ public class CharScreenController {
 
     public void goBack(ActionEvent event) throws IOException {
 
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/test.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/LoadScreen.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root));
         root.getStylesheets().add("/css/stylesheet.css");

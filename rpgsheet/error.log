@@ -1,0 +1,16 @@
+2020-05-10 00:00:41 [JavaFX Application Thread] controller.LoadScreen.initialize()
+ERROR: Couldn't load images. java.lang.NullPointerException
+2020-05-10 00:01:07 [JavaFX Application Thread] controller.LoadScreen.initialize()
+ERROR: Couldn't load images. java.lang.NullPointerException
+2020-05-10 00:01:20 [JavaFX Application Thread] controller.LoadScreen.initialize()
+ERROR: Couldn't load images. java.lang.NullPointerException
+2020-05-10 00:05:22 [JavaFX Application Thread] controller.LoadScreen.initialize()
+ERROR: Couldn't load images. java.lang.NullPointerException
+2020-05-10 00:07:40 [JavaFX Application Thread] controller.LoadScreen.initialize()
+ERROR: Couldn't load images. java.lang.NullPointerException
+2020-05-10 00:08:47 [JavaFX Application Thread] controller.LoadScreen.initialize()
+ERROR: Couldn't load images. java.lang.NullPointerException
+2020-05-10 00:09:46 [JavaFX Application Thread] controller.LoadScreen.initialize()
+ERROR: Couldn't load images. java.lang.NullPointerException
+2020-05-10 00:30:51 [JavaFX Application Thread] controller.LoadScreen.initialize()
+ERROR: Couldn't load images. java.lang.NullPointerException

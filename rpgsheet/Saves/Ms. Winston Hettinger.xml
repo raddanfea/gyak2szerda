@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <characterBase name="Ms. Winston Hettinger">
-    <level>20</level>
+    <level>10</level>
     <race>Elf</race>
     <age>200</age>
     <gender>Male</gender>
@@ -36,9 +36,9 @@
         </skill>
     </skills>
     <items>
-        <item>fsadsa</item>
+        <item>dsfsadsa</item>
         <item>Starting Items</item>
-        <item>Use Comma for New Line</item>
+        <item>Use Comma for New Linea</item>
     </items>
     <stats>
         <stat>
