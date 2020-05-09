@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<characterBase name="Mrs. Rocky Conn">
-    <level>5</level>
-    <race>Thiefling</race>
-    <age>38</age>
-    <gender>Male</gender>
+<characterBase name="New Character">
+    <level>15</level>
+    <race>Elf</race>
+    <age>132</age>
+    <gender>Female</gender>
     <rpgclass>Warrior</rpgclass>
+    <abilities>false</abilities>
+    <abilities>false</abilities>
+    <abilities>true</abilities>
+    <abilities>false</abilities>
+    <abilities>false</abilities>
+    <abilities>true</abilities>
+    <abilities>false</abilities>
+    <abilities>true</abilities>
+    <abilities>true</abilities>
     <skills>
         <skill>
             <name>Mage Skill 1</name>
@@ -26,27 +35,27 @@
     <stats>
         <stat>
             <name>Strength</name>
-            <value>12</value>
+            <value>9</value>
         </stat>
         <stat>
             <name>Dexterity</name>
-            <value>13</value>
-        </stat>
-        <stat>
-            <name>Constitution</name>
-            <value>9</value>
-        </stat>
-        <stat>
-            <name>Intelligence</name>
-            <value>13</value>
-        </stat>
-        <stat>
-            <name>Wisdom</name>
             <value>10</value>
         </stat>
         <stat>
-            <name>Charisma</name>
+            <name>Constitution</name>
+            <value>12</value>
+        </stat>
+        <stat>
+            <name>Intelligence</name>
+            <value>12</value>
+        </stat>
+        <stat>
+            <name>Wisdom</name>
             <value>9</value>
+        </stat>
+        <stat>
+            <name>Charisma</name>
+            <value>11</value>
         </stat>
     </stats>
 </characterBase>

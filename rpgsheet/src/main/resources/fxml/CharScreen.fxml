@@ -2,25 +2,78 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CharScreenController">
    <children>
-      <TextField fx:id="nameTxf" layoutX="45.0" layoutY="55.0" prefHeight="26.0" prefWidth="204.0" text="Name" />
-      <TextField fx:id="levelTxf" layoutX="280.0" layoutY="132.0" onAction="#refreshToFile" prefHeight="26.0" prefWidth="70.0" text="Level" />
-      <TextField fx:id="ageTxf" layoutX="280.0" layoutY="54.0" prefHeight="26.0" prefWidth="70.0" text="Age" />
-      <TextArea fx:id="itemsTxf" layoutX="486.0" layoutY="368.0" onKeyTyped="#refreshToFile" prefHeight="153.0" prefWidth="264.0" text="Items,&#10;Separated by comma,&#10;You Have to Manually Save" />
-      <Button fx:id="randomButton" layoutX="866.0" layoutY="451.0" mnemonicParsing="false" onAction="#randomCharGenSet" prefHeight="46.0" prefWidth="89.0" text="Random" />
+      <TextField fx:id="nameTxf" layoutX="45.0" layoutY="55.0" onMouseExited="#refreshToFile" prefHeight="26.0" prefWidth="204.0" text="Name" />
+      <TextField fx:id="levelTxf" layoutX="280.0" layoutY="132.0" onAction="#refreshToFile" onMouseExited="#refreshToFile" prefHeight="26.0" prefWidth="70.0" text="Level" />
+      <TextField fx:id="ageTxf" layoutX="280.0" layoutY="54.0" onMouseExited="#refreshToFile" prefHeight="26.0" prefWidth="70.0" text="Age" />
+      <TextArea fx:id="itemsTxf" layoutX="486.0" layoutY="368.0" onMouseExited="#refreshToFile" prefHeight="153.0" prefWidth="362.0" text="Items,&#10;Separated by comma,&#10;You Have to Manually Save">
+         <font>
+            <Font size="12.0" />
+         </font></TextArea>
+      <Button fx:id="randomButton" layoutX="852.0" layoutY="18.0" mnemonicParsing="false" onAction="#randomCharGenSet" prefHeight="37.0" prefWidth="89.0" text="Random" />
       <ChoiceBox id="genderChoice" fx:id="genderChoice" layoutX="381.0" layoutY="132.0" prefHeight="26.0" prefWidth="89.0" />
-      <Button layoutX="896.0" layoutY="521.0" mnemonicParsing="false" onAction="#goBack" text="&lt;" />
-      <Label layoutX="36.0" layoutY="15.0" prefHeight="26.0" prefWidth="81.0" text="Name" />
-      <Label layoutX="280.0" layoutY="15.0" prefHeight="26.0" prefWidth="50.0" text="Age" />
-      <Label layoutX="381.0" layoutY="15.0" prefHeight="26.0" prefWidth="57.0" text="Race" />
-      <Label layoutX="158.0" layoutY="93.0" prefHeight="26.0" prefWidth="57.0" text="Class" />
-      <Label layoutX="280.0" layoutY="93.0" prefHeight="26.0" prefWidth="50.0" text="Level" />
-      <Label layoutX="381.0" layoutY="98.0" text="Sex" />
+      <Button fx:id="backButton" contentDisplay="CENTER" layoutX="901.0" layoutY="529.0" mnemonicParsing="false" onAction="#goBack" prefHeight="37.0" prefWidth="40.0" text="&lt;" textAlignment="CENTER" />
+      <Label layoutX="36.0" layoutY="15.0" prefHeight="26.0" prefWidth="81.0" text="Name">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="280.0" layoutY="15.0" prefHeight="26.0" prefWidth="50.0" text="Age">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="381.0" layoutY="15.0" prefHeight="26.0" prefWidth="57.0" text="Race">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="158.0" layoutY="93.0" prefHeight="26.0" prefWidth="57.0" text="Class">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="280.0" layoutY="93.0" prefHeight="26.0" prefWidth="50.0" text="Level">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="381.0" layoutY="93.0" prefHeight="26.0" prefWidth="57.0" text="Sex">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
       <ChoiceBox fx:id="classChoice" layoutX="158.0" layoutY="132.0" prefHeight="26.0" prefWidth="89.0" />
       <ChoiceBox fx:id="raceChoice" layoutX="381.0" layoutY="54.0" prefHeight="26.0" prefWidth="89.0" />
-      <Button layoutX="880.0" layoutY="406.0" mnemonicParsing="false" onAction="#saveButton" text="SAVE" />
-      <Label fx:id="skillsTxf" alignment="TOP_LEFT" layoutX="486.0" layoutY="41.0" prefHeight="294.0" prefWidth="204.0" text="Skills" />
+      <Button layoutX="852.0" layoutY="68.0" mnemonicParsing="false" onAction="#saveButton" prefHeight="26.0" prefWidth="89.0" text="SAVE" />
+      <Label fx:id="skillsTxf" alignment="TOP_LEFT" layoutX="486.0" layoutY="54.0" prefHeight="285.0" prefWidth="204.0" text="Skills" />
+      <Label layoutX="484.0" layoutY="331.0" prefHeight="37.0" prefWidth="70.0" text="Items">
+         <font>
+            <Font name="Jamrul" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="486.0" layoutY="15.0" prefHeight="26.0" prefWidth="50.0" text="Skills">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <CheckBox layoutX="144.0" layoutY="246.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="142.0" text="Acrobatics" />
+      <CheckBox layoutX="144.0" layoutY="272.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="142.0" text="Arcana" />
+      <CheckBox layoutX="144.0" layoutY="298.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="142.0" text="Deception" />
+      <CheckBox layoutX="144.0" layoutY="324.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="142.0" text="History" />
+      <CheckBox layoutX="144.0" layoutY="350.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="142.0" text="Insight" />
+      <CheckBox layoutX="144.0" layoutY="376.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="142.0" text="Intimidation" />
+      <CheckBox layoutX="144.0" layoutY="402.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="142.0" text="Perception" />
+      <CheckBox layoutX="144.0" layoutY="428.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="142.0" text="Performance" />
+      <CheckBox layoutX="144.0" layoutY="454.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="142.0" text="Persuasion" />
+      <CheckBox layoutX="144.0" layoutY="480.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="142.0" text="Stealth" />
+      <CheckBox layoutX="144.0" layoutY="506.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="142.0" text="Slightofhand" />
+      <Label layoutX="136.0" layoutY="184.0" prefHeight="26.0" prefWidth="130.0" text="Proficiency">
+         <font>
+            <Font name="Fira Code Regular" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="profLabel" layoutX="136.0" layoutY="210.0" prefHeight="37.0" prefWidth="81.0" text="+2">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
    </children>
 </Pane>

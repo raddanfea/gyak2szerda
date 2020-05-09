@@ -19,7 +19,8 @@ public class CharacterSaveLogic {
                                  Enum rpgclasstosave,
                                  List<Skills> skillstosave,
                                  String itemstosave,
-                                 ArrayList<Stats> stattosave){
+                                 ArrayList<Stats> stattosave,
+                                 List<Boolean> abilitiestosave){
 
         try {
             CharacterBase ActiveChar = new CharacterBase();
@@ -34,6 +35,8 @@ public class CharacterSaveLogic {
             ActiveChar.setSkills(skillstosave);
             ActiveChar.setItems(Arrays.asList(itemstosave.replace("\n", "").split(",")));
             ActiveChar.setStats(stattosave);
+
+            ActiveChar.setAbilities(abilitiestosave);
 
             CharSaver.save(ActiveChar, "lastSave");
             CharSaver.save(ActiveChar,nametosave);

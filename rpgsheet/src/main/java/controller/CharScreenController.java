@@ -48,6 +48,9 @@ public class CharScreenController {
     @FXML
     private ChoiceBox<Enum> raceChoice;
 
+    @FXML
+    private Button backButton;
+
 
     public void initialize() {
 
@@ -95,7 +98,6 @@ public class CharScreenController {
     }
 
 
-
     public void refresh(){
 
         nameTxf.setText(ActiveChar.getName());
@@ -129,9 +131,8 @@ public class CharScreenController {
                 classChoice.getValue(),
                 ActiveChar.getSkillsList(),
                 itemsTxf.getText(),
-                ActiveChar.getStats());
-
-        Logger.trace("Saved to file.");
+                ActiveChar.getStats(),
+                ActiveChar.getAbilities());
 
         ActiveChar = CharSaver.load("lastSave");
         refresh();

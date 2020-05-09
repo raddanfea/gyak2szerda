@@ -14,3 +14,75 @@ ERROR: Couldn't load images. java.lang.NullPointerException
 ERROR: Couldn't load images. java.lang.NullPointerException
 2020-05-10 00:30:51 [JavaFX Application Thread] controller.LoadScreen.initialize()
 ERROR: Couldn't load images. java.lang.NullPointerException
+2020-05-10 01:35:45 [JavaFX Application Thread] helpers.CharSaver.load()
+ERROR: Character Saves/lastSave.xml not loaded because it could no be found.
+2020-05-10 01:39:59 [JavaFX Application Thread] helpers.CharSaver.load()
+ERROR: Character Saves/lastSave.xml not loaded because it could no be found.
+2020-05-10 01:40:04 [JavaFX Application Thread] helpers.CharSaver.load()
+ERROR: Character Saves/Abdul Ratke.xml not loaded because it could no be found.
+2020-05-10 01:40:20 [JavaFX Application Thread] helpers.CharSaver.load()
+ERROR: Character Saves/lastSave.xml not loaded because it could no be found.
+2020-05-10 01:40:23 [JavaFX Application Thread] helpers.CharSaver.load()
+ERROR: Character Saves/lastSave.xml not loaded because it could no be found.
+2020-05-10 01:40:31 [JavaFX Application Thread] helpers.CharSaver.load()
+ERROR: Character Saves/null.xml not loaded because it could no be found.
+2020-05-10 01:40:31 [JavaFX Application Thread] helpers.CharSaver.load()
+ERROR: Last Save is missing, therefore returning a random character.
+2020-05-10 01:40:36 [JavaFX Application Thread] helpers.CharSaver.load()
+ERROR: Character Saves/null.xml not loaded because it could no be found.
+2020-05-10 01:40:36 [JavaFX Application Thread] helpers.CharSaver.load()
+ERROR: Last Save is missing, therefore returning a random character.
+2020-05-10 01:40:47 [JavaFX Application Thread] helpers.CharSaver.save()
+ERROR: Character could not be saved.
+com.sun.xml.bind.v2.runtime.IllegalAnnotationsException: 1 counts of IllegalAnnotationExceptions
+Property abilities is present but not specified in @XmlType.propOrder
+	this problem is related to the following location:
+		at private java.util.List characters.CharacterBase.abilities
+		at characters.CharacterBase
+
+2020-05-10 01:40:47 [JavaFX Application Thread] helpers.CharSaver.save()
+ERROR: Character could not be saved.
+com.sun.xml.bind.v2.runtime.IllegalAnnotationsException: 1 counts of IllegalAnnotationExceptions
+Property abilities is present but not specified in @XmlType.propOrder
+	this problem is related to the following location:
+		at private java.util.List characters.CharacterBase.abilities
+		at characters.CharacterBase
+
+2020-05-10 01:40:47 [JavaFX Application Thread] helpers.CharSaver.load()
+ERROR: Character Saves/lastSave.xml not loaded because it could no be found.
+2020-05-10 01:41:01 [JavaFX Application Thread] helpers.CharSaver.load()
+ERROR: Character Saves/lastSave.xml not loaded because it could no be found.
+2020-05-10 01:41:03 [JavaFX Application Thread] helpers.CharSaver.load()
+ERROR: Character Saves/lastSave.xml not loaded because it could no be found.
+2020-05-10 01:41:09 [JavaFX Application Thread] helpers.CharSaver.load()
+ERROR: Character Saves/lastSave.xml not loaded because it could no be found.
+2020-05-10 01:50:57 [JavaFX Application Thread] helpers.CharSaver.load()
+ERROR: Character Saves/null.xml not loaded because it could no be found.
+2020-05-10 01:50:57 [JavaFX Application Thread] helpers.CharSaver.load()
+ERROR: Last Save is missing, therefore returning a random character.
+2020-05-10 01:50:58 [JavaFX Application Thread] helpers.CharSaver.save()
+ERROR: Character could not be saved.
+com.sun.xml.bind.v2.runtime.IllegalAnnotationsException: 1 counts of IllegalAnnotationExceptions
+Property abilities is present but not specified in @XmlType.propOrder
+	this problem is related to the following location:
+		at private java.util.List characters.CharacterBase.abilities
+		at characters.CharacterBase
+
+2020-05-10 01:50:58 [JavaFX Application Thread] helpers.CharSaver.save()
+ERROR: Character could not be saved.
+com.sun.xml.bind.v2.runtime.IllegalAnnotationsException: 1 counts of IllegalAnnotationExceptions
+Property abilities is present but not specified in @XmlType.propOrder
+	this problem is related to the following location:
+		at private java.util.List characters.CharacterBase.abilities
+		at characters.CharacterBase
+
+2020-05-10 01:50:58 [JavaFX Application Thread] helpers.CharSaver.load()
+ERROR: Character Saves/lastSave.xml not loaded because it could no be found.
+2020-05-10 01:52:16 [JavaFX Application Thread] helpers.CharSaver.load()
+ERROR: Character Saves/lastSave.xml not loaded because it could no be found.
+2020-05-10 01:52:49 [JavaFX Application Thread] helpers.CharSaver.load()
+ERROR: Character Saves/lastSave.xml not loaded because it could no be found.
+2020-05-10 01:52:59 [JavaFX Application Thread] helpers.CharSaver.load()
+ERROR: Character Saves/null.xml not loaded because it could no be found.
+2020-05-10 01:52:59 [JavaFX Application Thread] helpers.CharSaver.load()
+ERROR: Last Save is missing, therefore returning a random character.

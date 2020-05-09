@@ -1,61 +1,53 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<characterBase name="Ms. Winston Hettinger">
-    <level>10</level>
+<characterBase name="Character Name">
+    <level>15</level>
     <race>Elf</race>
-    <age>200</age>
-    <gender>Male</gender>
+    <age>132</age>
+    <gender>Female</gender>
     <rpgclass>Warrior</rpgclass>
+    <abilities>false</abilities>
+    <abilities>false</abilities>
+    <abilities>true</abilities>
+    <abilities>false</abilities>
+    <abilities>false</abilities>
+    <abilities>true</abilities>
+    <abilities>false</abilities>
+    <abilities>true</abilities>
+    <abilities>true</abilities>
     <skills>
         <skill>
-            <name>Warrior Skill 1</name>
+            <name>Mage Skill 1</name>
             <effect>Effect 1</effect>
         </skill>
         <skill>
-            <name>Warrior Skill 2</name>
+            <name>Mage Skill 2</name>
             <effect>Effect 2</effect>
         </skill>
         <skill>
-            <name>Warrior Skill 3</name>
-            <effect>Effect 3</effect>
-        </skill>
-        <skill>
-            <name>Warrior Skill 4</name>
-            <effect>Effect 4</effect>
-        </skill>
-        <skill>
-            <name>Warrior Skill 5</name>
-            <effect>Effect 5</effect>
-        </skill>
-        <skill>
-            <name>Warrior Skill 6</name>
-            <effect>Effect 6</effect>
-        </skill>
-        <skill>
-            <name>Warrior Skill 7</name>
-            <effect>Effect 7</effect>
+            <name>Mage Skill 3</name>
+            <effect>Effect 2</effect>
         </skill>
     </skills>
     <items>
-        <item>dsfsadsa</item>
         <item>Starting Items</item>
-        <item>Use Comma for New Linea</item>
+        <item>Use Comma for New Line</item>
     </items>
     <stats>
         <stat>
             <name>Strength</name>
-            <value>10</value>
-        </stat>
-        <stat>
-            <name>Dexterity</name>
-            <value>11</value>
-        </stat>
-        <stat>
-            <name>Constitution</name>
             <value>9</value>
         </stat>
         <stat>
-            <name>Intelligence</name>
+            <name>Dexterity</name>
             <value>10</value>
+        </stat>
+        <stat>
+            <name>Constitution</name>
+            <value>12</value>
+        </stat>
+        <stat>
+            <name>Intelligence</name>
+            <value>12</value>
         </stat>
         <stat>
             <name>Wisdom</name>

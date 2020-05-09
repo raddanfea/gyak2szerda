@@ -4,13 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import javax.xml.bind.annotation.*;
+
+import com.sun.javafx.scene.layout.region.SliceSequenceConverter;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(propOrder = {"name","level","race","age","gender","rpgclass","skills","items","stats"})
+@XmlType(propOrder = {"name","level","race","age","gender","rpgclass", "abilities", "skills","items","stats"})
 @Data
 public class CharacterBase {
 
@@ -30,6 +32,8 @@ public class CharacterBase {
         return rpgclass;
     }
 
+    private List<Boolean> abilities;
+    public List<Boolean> getAbilities() { return abilities; }
 
     @XmlElementWrapper(name = "skills")
     @XmlElement(name = "skill")
