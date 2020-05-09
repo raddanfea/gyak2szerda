@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<characterBase name="Elliott Waelchi">
+    <level>8</level>
+    <race>Dwarf</race>
+    <age>73</age>
+    <gender>Male</gender>
+    <rpgclass>Mage</rpgclass>
+    <skills>
+        <skill>
+            <name>Mage Skill 1</name>
+            <effect>Effect 1</effect>
+        </skill>
+        <skill>
+            <name>Mage Skill 2</name>
+            <effect>Effect 2</effect>
+        </skill>
+        <skill>
+            <name>Mage Skill 3</name>
+            <effect>Effect 2</effect>
+        </skill>
+    </skills>
+    <items>
+        <item>Starting Items</item>
+        <item>Use Comma for New Line</item>
+    </items>
+    <stats>
+        <stat>
+            <name>Strength</name>
+            <value>12</value>
+        </stat>
+        <stat>
+            <name>Dexterity</name>
+            <value>8</value>
+        </stat>
+        <stat>
+            <name>Constitution</name>
+            <value>9</value>
+        </stat>
+        <stat>
+            <name>Intelligence</name>
+            <value>12</value>
+        </stat>
+        <stat>
+            <name>Wisdom</name>
+            <value>12</value>
+        </stat>
+        <stat>
+            <name>Charisma</name>
+            <value>14</value>
+        </stat>
+    </stats>
+</characterBase>

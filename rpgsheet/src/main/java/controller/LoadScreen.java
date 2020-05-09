@@ -51,6 +51,7 @@ public class LoadScreen {
         fxmlLoader.<CharScreenController>getController().initdata(loadBox.getValue());
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root));
+        root.getStylesheets().add("/css/stylesheet.css");
         stage.show();
 
         Logger.trace("Loading Character: {}", this.loadBox.getValue());
