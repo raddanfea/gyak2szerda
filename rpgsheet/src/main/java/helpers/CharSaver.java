@@ -9,9 +9,13 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 
 public class CharSaver{
+
+    private static String folder = "Saves/";
+    private static String extension = ".xml";
+
     public static void save(Object o, String filename){
 
-        String output = "Saves/" + filename + ".xml"; /*build filename*/
+        String output = folder + filename + extension; /*build filename*/
 
         try {
             JAXBHelper.toXML(o, new FileOutputStream(output)); //throws to JAXBHelper
@@ -25,7 +29,7 @@ public class CharSaver{
 
     public static CharacterBase load(String filename){
 
-        String input = "Saves/" + filename + ".xml"; /*build filename*/
+        String input = folder + filename + extension; /*build filename*/
         CharacterBase ActiveChar = null;
 
         try {
@@ -37,7 +41,7 @@ public class CharSaver{
             Logger.error("Character {} not loaded because it could no be found.", input);
             if(filename == null) {
                 ActiveChar = new MakeRandomCharacter().MakeRandomCharacter();
-                ActiveChar.setName("New Character");
+                ActiveChar.setName("lastSave");
                 Logger.error("Last Save is missing, therefore returning a random character.");
             }
         }

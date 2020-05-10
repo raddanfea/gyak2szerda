@@ -2,14 +2,13 @@ package characters;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 import javax.xml.bind.annotation.*;
-
-import com.sun.javafx.scene.layout.region.SliceSequenceConverter;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
+
+/**
+ * Getter was inconsistent between different OS types, so I manually created getters.
+ */
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(propOrder = {"name","level","race","age","gender","rpgclass", "abilities", "skills","items","stats"})
@@ -72,7 +71,6 @@ public class CharacterBase {
     public static enum  Rpgclass {
         Warrior, Mage;
     }
-
 
     public String getName() { return name;  }
 

@@ -82,3 +82,27 @@
 #backButton:hover {
     -fx-background-color: linear-gradient(#2A5058, #61a2b1);
 }
+
+#loadBox{
+    -fx-background-radius: 0 0 15 15;
+    -fx-background-insets: 0 0 2 2 ;
+}
+
+#editorButton{
+    -fx-background-radius: 15 15 0 0;
+    -fx-background-insets: 2 2 0 0 ;
+}
+
+.choice-box .context-menu {
+    -fx-background-color: rgba(47,79,79,0.9);
+    -fx-background-radius: 15 15 15 15;
+    -fx-background-insets: 2 2 2 2;
+}
+.choice-box .menu-item:focused {
+    -fx-background-color: lightgrey;
+    -fx-background-radius: 15 15 15 15;
+    -fx-background-insets: 2 2 2 2 ;
+}
+.choice-box .menu-item > .label {
+    -fx-text-fill: white;
+}

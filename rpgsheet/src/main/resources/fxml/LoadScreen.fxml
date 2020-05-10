@@ -12,12 +12,12 @@
                 <Font name="Tlwg Typist Bold" size="44.0" />
             </font>
         </Label>
-      <Button fx:id="randomButton" layoutX="396.0" layoutY="226.0" mnemonicParsing="false" onAction="#MakeAndShowRandomChar" prefHeight="64.0" prefWidth="203.0" text="Open Editor">
+      <Button fx:id="editorButton" alignment="CENTER" contentDisplay="CENTER" layoutX="400.0" layoutY="247.0" mnemonicParsing="false" onAction="#MakeAndShowRandomChar" prefHeight="64.0" prefWidth="203.0" text="Open Editor" textAlignment="CENTER">
          <font>
-            <Font name="FreeMono Bold" size="17.0" />
+            <Font name="FreeMono Bold" size="18.0" />
          </font>
       </Button>
-        <ChoiceBox fx:id="loadBox" layoutX="396.0" layoutY="330.0" prefHeight="39.0" prefWidth="203.0" />
+        <ChoiceBox fx:id="loadBox" layoutX="398.0" layoutY="315.0" prefHeight="39.0" prefWidth="203.0" />
       <ImageView fx:id="nemeiah" fitHeight="347.0" fitWidth="317.0" layoutX="643.0" layoutY="233.0" pickOnBounds="true" preserveRatio="true" />
     </children>
 </Pane>

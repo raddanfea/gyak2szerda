@@ -14,10 +14,21 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import org.tinylog.Logger;
+
+import javax.lang.model.type.ArrayType;
+import javax.swing.*;
+import java.awt.*;
 import java.io.IOException;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class CharScreenController {
 
@@ -26,33 +37,33 @@ public class CharScreenController {
 
     @FXML
     private TextField nameTxf;
-
     @FXML
     private TextField ageTxf;
+    @FXML
+    private TextField levelTxf;
 
     @FXML
     private TextArea itemsTxf;
 
     @FXML
-    private TextField levelTxf;
-
-    @FXML
     private Label skillsTxf;
-
+    @FXML
+    private Label profLabel;
 
     @FXML
     private ChoiceBox<Enum> genderChoice;
-
     @FXML
     private ChoiceBox<Enum> classChoice;
-
     @FXML
     private ChoiceBox<Enum> raceChoice;
 
-    @FXML
-    private Button backButton;
 
 
+
+
+    /**
+     * When initializing, builds elements of ChoiceBoxes and creates listener to update the page when changed.
+     */
     public void initialize() {
 
         raceChoice.getItems().addAll(CharacterBase.Race.values());
@@ -84,6 +95,10 @@ public class CharScreenController {
 
     }
 
+    /**
+     * Catches savefile name from the loading screen then loads it.
+     * @param loadCharName Name to load.
+     */
     public void initdata(String loadCharName) {
 
         this.loadedCharName = loadCharName;
@@ -91,6 +106,9 @@ public class CharScreenController {
         refresh();
     }
 
+    /**
+     * Generates random character then displays it.
+     */
     public void randomCharGenSet(ActionEvent actionEvent) {
 
         ActiveChar = new MakeRandomCharacter().MakeRandomCharacter();
@@ -98,7 +116,12 @@ public class CharScreenController {
         refresh();
     }
 
-
+    /**
+     * Refreshes actively shown data.
+     * Skills are built with ClassSkills helper.
+     * Items are a string regex.
+     * Proficiency (profLabel) is one-way basic math, not saved in file.
+     */
     public void refresh(){
 
         nameTxf.setText(ActiveChar.getName());
@@ -109,16 +132,32 @@ public class CharScreenController {
         raceChoice.setValue(ActiveChar.getRace());
         skillsTxf.setText(ClassSkills.SkillsToString(ClassSkills.GetSkills(ActiveChar.getRpgclass(),ActiveChar.getLevel())));
         itemsTxf.setText(String.join(",", ActiveChar.getItems()).replace(",",",\n"));
+        profLabel.setText(new StringBuilder().append("+").append(2+ActiveChar.getLevel()/3).toString());
+
+        for (int i = 0; i < ActiveChar.getAbilities().size(); i++) {
+            ActiveChar.getAbilities().get(i);
+
+
+
+        }
 
         Logger.trace("Page refreshed.");
 
     }
 
+    /**
+     * Manual save button calls save.
+     * @param event Button press event
+     * @throws IOException Button press exception
+     */
     public void saveButton(ActionEvent event)throws IOException {
         refreshToFile();
         Logger.trace("Save was manual.");
     }
 
+    /**
+     * Saves data to file and calls refresh to update displayed data.
+     */
     public void refreshToFile(){
 
         Logger.trace("Saving to file...");
@@ -139,7 +178,13 @@ public class CharScreenController {
         refresh();
     }
 
+    /**
+     * Saves data to memory and calls refresh to update displayed data.
+     */
     public void refreshTemp(){
+
+        Logger.trace("Saving to temporary memory.");
+
         ActiveChar.setName(nameTxf.getText());
         ActiveChar.setLevel(Integer.parseInt(levelTxf.getText()));
         ActiveChar.setAge(Integer.parseInt(ageTxf.getText()));
@@ -154,6 +199,11 @@ public class CharScreenController {
     }
 
 
+    /**
+     * Button to return to the load screen.
+     * @param event Button event
+     * @throws IOException Button exception
+     */
     public void goBack(ActionEvent event) throws IOException {
 
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/LoadScreen.fxml"));

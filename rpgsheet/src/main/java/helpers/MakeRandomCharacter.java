@@ -4,13 +4,13 @@ package helpers;
 import characters.CharacterBase;
 import characters.Stats;
 import com.github.javafaker.Faker;
-import helpers.ClassSkills;
 import org.tinylog.Logger;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 public class MakeRandomCharacter {
+
+    private Integer levelbuffer;
 
     public CharacterBase MakeRandomCharacter(){
 
@@ -21,7 +21,8 @@ public class MakeRandomCharacter {
 
         ActiveChar.setName(faker.name().fullName());
 
-        int levelbuffer = faker.number().numberBetween(1,20);
+        levelbuffer = faker.number().numberBetween(1,20);
+
         ActiveChar.setLevel(levelbuffer);
 
         ActiveChar.setAge(faker.number().numberBetween(150,200) * levelbuffer / 20);
@@ -29,7 +30,7 @@ public class MakeRandomCharacter {
         ActiveChar.setRace(faker.options().option(CharacterBase.Race.values()));
 
         ActiveChar.setRpgclass(faker.options().option(CharacterBase.Rpgclass.values()));
-        ActiveChar.setSkills(ClassSkills.GetSkills(faker.options().option(CharacterBase.Rpgclass.values()),levelbuffer));
+        ActiveChar.setSkills(ClassSkills.GetSkills(faker.options().option(CharacterBase.Rpgclass.values()), levelbuffer));
 
         ActiveChar.setItems(List.of("Starting Items,Use Comma for New Line"));
 

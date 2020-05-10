@@ -54,17 +54,17 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <CheckBox layoutX="144.0" layoutY="246.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="142.0" text="Acrobatics" />
-      <CheckBox layoutX="144.0" layoutY="272.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="142.0" text="Arcana" />
-      <CheckBox layoutX="144.0" layoutY="298.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="142.0" text="Deception" />
-      <CheckBox layoutX="144.0" layoutY="324.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="142.0" text="History" />
-      <CheckBox layoutX="144.0" layoutY="350.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="142.0" text="Insight" />
-      <CheckBox layoutX="144.0" layoutY="376.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="142.0" text="Intimidation" />
-      <CheckBox layoutX="144.0" layoutY="402.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="142.0" text="Perception" />
-      <CheckBox layoutX="144.0" layoutY="428.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="142.0" text="Performance" />
-      <CheckBox layoutX="144.0" layoutY="454.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="142.0" text="Persuasion" />
-      <CheckBox layoutX="144.0" layoutY="480.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="142.0" text="Stealth" />
-      <CheckBox layoutX="144.0" layoutY="506.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="142.0" text="Slightofhand" />
+      <CheckBox fx:id="checkBox1" layoutX="144.0" layoutY="246.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="142.0" text="Acrobatics" />
+      <CheckBox fx:id="checkBox2" layoutX="144.0" layoutY="272.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="142.0" text="Arcana" />
+      <CheckBox fx:id="checkBox3" layoutX="144.0" layoutY="298.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="142.0" text="Deception" />
+      <CheckBox fx:id="checkBox4" layoutX="144.0" layoutY="324.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="142.0" text="History" />
+      <CheckBox fx:id="checkBox5" layoutX="144.0" layoutY="350.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="142.0" text="Insight" />
+      <CheckBox fx:id="checkBox6" layoutX="144.0" layoutY="376.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="142.0" text="Intimidation" />
+      <CheckBox fx:id="checkBox7" layoutX="144.0" layoutY="402.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="142.0" text="Perception" />
+      <CheckBox fx:id="checkBox8" layoutX="144.0" layoutY="428.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="142.0" text="Performance" />
+      <CheckBox fx:id="checkBox9" layoutX="144.0" layoutY="454.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="142.0" text="Persuasion" />
+      <CheckBox fx:id="checkBox10" layoutX="144.0" layoutY="480.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="142.0" text="Stealth" />
+      <CheckBox fx:id="checkBox11" layoutX="144.0" layoutY="506.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="142.0" text="Slightofhand" />
       <Label layoutX="136.0" layoutY="184.0" prefHeight="26.0" prefWidth="130.0" text="Proficiency">
          <font>
             <Font name="Fira Code Regular" size="16.0" />
