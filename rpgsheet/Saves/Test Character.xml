@@ -1,61 +1,62 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<characterBase name="New Character">
+<characterBase name="Test Character">
     <level>15</level>
     <race>Elf</race>
-    <age>132</age>
+    <age>18</age>
     <gender>Female</gender>
     <rpgclass>Warrior</rpgclass>
     <abilities>false</abilities>
     <abilities>false</abilities>
     <abilities>true</abilities>
+    <abilities>true</abilities>
     <abilities>false</abilities>
     <abilities>false</abilities>
     <abilities>true</abilities>
     <abilities>false</abilities>
-    <abilities>true</abilities>
-    <abilities>true</abilities>
+    <abilities>false</abilities>
     <skills>
         <skill>
-            <name>Mage Skill 1</name>
+            <name>Warrior Skill 1</name>
             <effect>Effect 1</effect>
         </skill>
         <skill>
-            <name>Mage Skill 2</name>
+            <name>Warrior Skill 2</name>
             <effect>Effect 2</effect>
         </skill>
         <skill>
-            <name>Mage Skill 3</name>
-            <effect>Effect 2</effect>
+            <name>Warrior Skill 3</name>
+            <effect>Effect 3</effect>
         </skill>
     </skills>
     <items>
-        <item>Starting Items</item>
-        <item>Use Comma for New Line</item>
+        <item>Items</item>
+        <item>Separated by comma</item>
+        <item>You Have to Manually Save</item>
     </items>
     <stats>
         <stat>
             <name>Strength</name>
-            <value>9</value>
+            <value>13</value>
         </stat>
         <stat>
             <name>Dexterity</name>
-            <value>10</value>
+            <value>12</value>
         </stat>
         <stat>
             <name>Constitution</name>
-            <value>12</value>
+            <value>10</value>
         </stat>
         <stat>
             <name>Intelligence</name>
-            <value>12</value>
+            <value>10</value>
         </stat>
         <stat>
             <name>Wisdom</name>
-            <value>9</value>
+            <value>8</value>
         </stat>
         <stat>
             <name>Charisma</name>
-            <value>11</value>
+            <value>10</value>
         </stat>
     </stats>
 </characterBase>

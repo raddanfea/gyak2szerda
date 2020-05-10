@@ -17,6 +17,7 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 import org.tinylog.Logger;
 import java.io.IOException;
+import java.util.Arrays;
 
 public class CharScreenController {
 
@@ -135,6 +136,20 @@ public class CharScreenController {
                 ActiveChar.getAbilities());
 
         ActiveChar = CharSaver.load("lastSave");
+        refresh();
+    }
+
+    public void refreshTemp(){
+        ActiveChar.setName(nameTxf.getText());
+        ActiveChar.setLevel(Integer.parseInt(levelTxf.getText()));
+        ActiveChar.setAge(Integer.parseInt(ageTxf.getText()));
+        ActiveChar.setGender(CharacterBase.Gender.valueOf(genderChoice.getValue().toString()));
+        ActiveChar.setRace(CharacterBase.Race.valueOf(raceChoice.getValue().toString()));
+        ActiveChar.setRpgclass(CharacterBase.Rpgclass.valueOf(classChoice.getValue().toString()));
+        ActiveChar.setSkills(ActiveChar.getSkillsList());
+        ActiveChar.setItems(Arrays.asList(itemsTxf.getText().replace("\n", "").split(",")));
+        ActiveChar.setStats(ActiveChar.getStats());
+        ActiveChar.setAbilities(ActiveChar.getAbilities());
         refresh();
     }
 

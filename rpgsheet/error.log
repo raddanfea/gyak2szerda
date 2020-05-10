@@ -86,3 +86,11 @@ ERROR: Character Saves/lastSave.xml not loaded because it could no be found.
 ERROR: Character Saves/null.xml not loaded because it could no be found.
 2020-05-10 01:52:59 [JavaFX Application Thread] helpers.CharSaver.load()
 ERROR: Last Save is missing, therefore returning a random character.
+2020-05-10 15:46:59 [JavaFX Application Thread] helpers.CharSaver.load()
+ERROR: Character Saves/null.xml not loaded because it could no be found.
+2020-05-10 15:46:59 [JavaFX Application Thread] helpers.CharSaver.load()
+ERROR: Last Save is missing, therefore returning a random character.
+2020-05-10 15:47:30 [JavaFX Application Thread] helpers.CharSaver.load()
+ERROR: Character Saves/null.xml not loaded because it could no be found.
+2020-05-10 15:47:31 [JavaFX Application Thread] helpers.CharSaver.load()
+ERROR: Last Save is missing, therefore returning a random character.
