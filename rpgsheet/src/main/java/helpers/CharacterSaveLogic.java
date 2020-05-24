@@ -8,7 +8,6 @@ import org.tinylog.Logger;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Set;
 
 public class CharacterSaveLogic {
     public static void SaveLogic(String nametosave,
@@ -17,10 +16,9 @@ public class CharacterSaveLogic {
                                  Enum gendertosave,
                                  Enum racetosave,
                                  Enum rpgclasstosave,
-                                 List<Skills> skillstosave,
                                  String itemstosave,
                                  ArrayList<Stats> stattosave,
-                                 List<Boolean> abilitiestosave){
+                                 ArrayList<Boolean> abilitiestosave){
 
         try {
             CharacterBase ActiveChar = new CharacterBase();
@@ -32,10 +30,9 @@ public class CharacterSaveLogic {
 
             ActiveChar.setRpgclass(CharacterBase.Rpgclass.valueOf(rpgclasstosave.toString()));
 
-            ActiveChar.setSkills(skillstosave);
+            ActiveChar.setSkills(ClassSkills.GetSkills(ActiveChar.getRpgclass(), ActiveChar.getLevel()));
             ActiveChar.setItems(Arrays.asList(itemstosave.replace("\n", "").split(",")));
             ActiveChar.setStats(stattosave);
-
             ActiveChar.setAbilities(abilitiestosave);
 
             CharSaver.save(ActiveChar, "lastSave");

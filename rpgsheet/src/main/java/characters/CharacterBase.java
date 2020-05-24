@@ -31,8 +31,9 @@ public class CharacterBase {
         return rpgclass;
     }
 
-    private List<Boolean> abilities;
-    public List<Boolean> getAbilities() { return abilities; }
+    @XmlList
+    private ArrayList<Boolean> abilities;
+    public ArrayList<Boolean> getAbilities() { return abilities; }
 
     @XmlElementWrapper(name = "skills")
     @XmlElement(name = "skill")

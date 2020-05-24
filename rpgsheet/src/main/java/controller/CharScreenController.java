@@ -1,10 +1,12 @@
 package controller;
 
 import characters.CharacterBase;
+import com.sun.javafx.scene.control.Logging;
 import helpers.MakeRandomCharacter;
 import helpers.CharSaver;
 import helpers.CharacterSaveLogic;
 import helpers.ClassSkills;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
@@ -20,61 +22,54 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.*;
 import javafx.stage.Stage;
 import org.tinylog.Logger;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class CharScreenController {
 
     private CharacterBase ActiveChar;
     private String loadedCharName;
 
-    @FXML
-    private TextField nameTxf;
-    @FXML
-    private TextField ageTxf;
-    @FXML
-    private TextField levelTxf;
+    @FXML    private TextField nameTxf;
+    @FXML    private TextField ageTxf;
+    @FXML    private TextField levelTxf;
 
-    @FXML
-    private TextArea itemsTxf;
+    @FXML    private TextArea itemsTxf;
 
-    @FXML
-    private Label skillsTxf;
-    @FXML
-    private Label profLabel;
-    @FXML
-    private Label stat1;
-    @FXML
-    private Label stat2;
-    @FXML
-    private Label stat3;
-    @FXML
-    private Label stat4;
-    @FXML
-    private Label stat5;
-    @FXML
-    private Label stat6;
+    @FXML    private Label skillsTxf;
+    @FXML    private Label profLabel;
 
-    @FXML
-    private ChoiceBox<Enum> genderChoice;
-    @FXML
-    private ChoiceBox<Enum> classChoice;
-    @FXML
-    private ChoiceBox<Enum> raceChoice;
+    @FXML    private Label Str;
+    @FXML    private Label Dex;
+    @FXML    private Label Con;
+    @FXML    private Label Int;
+    @FXML    private Label Wis;
+    @FXML    private Label Char;
 
-    @FXML
-    private Button randomButton;
-    @FXML
-    private Button loadButton;
+    @FXML    private ChoiceBox<Enum> genderChoice;
+    @FXML    private ChoiceBox<Enum> classChoice;
+    @FXML    private ChoiceBox<Enum> raceChoice;
 
+    @FXML private Button randomButton;
+    @FXML private Button loadButton;
 
-
-
-
+    @FXML private CheckBox checkBox1;
+    @FXML private CheckBox checkBox2;
+    @FXML private CheckBox checkBox3;
+    @FXML private CheckBox checkBox4;
+    @FXML private CheckBox checkBox5;
+    @FXML private CheckBox checkBox6;
+    @FXML private CheckBox checkBox7;
+    @FXML private CheckBox checkBox8;
+    @FXML private CheckBox checkBox9;
+    @FXML private CheckBox checkBox10;
+    @FXML private CheckBox checkBox11;
 
     /**
      * When initializing, builds elements of ChoiceBoxes and creates listener to update the page when changed.
@@ -149,7 +144,7 @@ public class CharScreenController {
      * Refreshes actively shown data.
      * Skills are built with ClassSkills helper.
      * Items are a string regex.
-     * Proficiency (profLabel) is one-way basic math, not saved in file.
+     * Proficiency (profLabel) is one-way basic calculation, not saved in file.
      */
     public void refresh(){
 
@@ -163,21 +158,11 @@ public class CharScreenController {
         itemsTxf.setText(String.join(",", ActiveChar.getItems()).replace(",",",\n"));
         profLabel.setText(new StringBuilder().append("+").append(2+ActiveChar.getLevel()/3).toString());
 
-        for (int i = 0; i < ActiveChar.getAbilities().size(); i++) {
-            ActiveChar.getAbilities().get(i);
-        }
+        List<Label> statsList = List.of(Str,Dex,Con,Int,Wis,Char);
+        statsList.parallelStream().forEach((StatsTemp) -> StatsTemp.setText(ActiveChar.getStats().get(statsList.indexOf(StatsTemp)).getValue().toString()));
 
-
-
-
-        stat1.setText(ActiveChar.getStats().get(0).getValue().toString());
-        stat2.setText(ActiveChar.getStats().get(1).getValue().toString());
-        stat3.setText(ActiveChar.getStats().get(2).getValue().toString());
-        stat4.setText(ActiveChar.getStats().get(3).getValue().toString());
-        stat5.setText(ActiveChar.getStats().get(4).getValue().toString());
-        stat6.setText(ActiveChar.getStats().get(5).getValue().toString());
-
-
+        List<CheckBox> checkBoxList = List.of(checkBox1,checkBox2,checkBox3,checkBox4,checkBox5,checkBox6,checkBox7,checkBox8,checkBox9,checkBox10,checkBox11);
+        checkBoxList.parallelStream().forEach((AbilityTemp) -> AbilityTemp.setSelected(ActiveChar.getAbilities().get(checkBoxList.indexOf(AbilityTemp))));
 
         Logger.trace("Page refreshed.");
 
@@ -207,7 +192,6 @@ public class CharScreenController {
                 genderChoice.getValue(),
                 raceChoice.getValue(),
                 classChoice.getValue(),
-                ActiveChar.getSkillsList(),
                 itemsTxf.getText(),
                 ActiveChar.getStats(),
                 ActiveChar.getAbilities());
@@ -221,7 +205,7 @@ public class CharScreenController {
      */
     public void refreshTemp(){
 
-        Logger.trace("Saving to temporary memory.");
+        Logger.trace("Saving to memory.");
 
         ActiveChar.setName(nameTxf.getText());
         ActiveChar.setLevel(Integer.parseInt(levelTxf.getText()));
@@ -234,6 +218,16 @@ public class CharScreenController {
         ActiveChar.setStats(ActiveChar.getStats());
         ActiveChar.setAbilities(ActiveChar.getAbilities());
         refresh();
+    }
+
+    @FXML
+    private void handleCheckBoxAction(ActionEvent event) {
+        CheckBox operatorPressed = ((CheckBox) event.getSource());
+
+        List<CheckBox> checkBoxList = List.of(checkBox1,checkBox2,checkBox3,checkBox4,checkBox5,checkBox6,checkBox7,checkBox8,checkBox9,checkBox10,checkBox11);
+        ArrayList<Boolean> CharTemp = ActiveChar.getAbilities();
+        CharTemp.set(checkBoxList.indexOf(operatorPressed),operatorPressed.selectedProperty().getValue());
+        ActiveChar.setAbilities(CharTemp);
     }
 
 

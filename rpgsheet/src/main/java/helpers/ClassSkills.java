@@ -32,9 +32,21 @@ public class ClassSkills {
                 }
                 break;
             case "Mage":
-                skills.add(new Skills("Mage Skill 1",  "Effect 1"));
-                skills.add(new Skills("Mage Skill 2",  "Effect 2"));
-                skills.add(new Skills("Mage Skill 3",  "Effect 2"));
+                skills.add(new Skills("Mage Skill 1", "Effect 1"));
+                skills.add(new Skills("Mage Skill 2", "Effect 2"));
+                skills.add(new Skills("Mage Skill 3", "Effect 3"));
+                if(level > 5){
+                    skills.add(new Skills("Mage Skill 4", "Effect 4"));
+                    skills.add(new Skills("Mage Skill 5", "Effect 5"));
+                }
+                if(level > 10){
+                    skills.add(new Skills("Mage Skill 6", "Effect 6"));
+                    skills.add(new Skills("Mage Skill 7", "Effect 7"));
+                }
+                if(level > 15){
+                    skills.add(new Skills("Mage Skill 8", "Effect 8"));
+                    skills.add(new Skills("Mage Skill 9", "Effect 9"));
+                }
                 break;
             default:
                 skills.add(new Skills("Error!", "This is an anti-crash measure."));

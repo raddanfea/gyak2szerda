@@ -42,10 +42,11 @@ public class MakeRandomCharacter {
 
         ActiveChar.setStats(statsbuffer);
 
-        List<Boolean> abilities = List.of(
-                faker.bool().bool(),faker.bool().bool(),faker.bool().bool(),
-                faker.bool().bool(),faker.bool().bool(),faker.bool().bool(),
-                faker.bool().bool(),faker.bool().bool(),faker.bool().bool());
+        ArrayList<Boolean> abilities = new ArrayList<>(List.of(
+                faker.bool().bool(), faker.bool().bool(), faker.bool().bool(),
+                faker.bool().bool(), faker.bool().bool(), faker.bool().bool(),
+                faker.bool().bool(), faker.bool().bool(), faker.bool().bool(),
+                faker.bool().bool(), faker.bool().bool()));
 
         ActiveChar.setAbilities(abilities);
 
