@@ -5,8 +5,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoadScreen">
+<Pane fx:id="loadPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoadScreen">
     <children>
+      <ImageView fx:id="nemeiah" fitHeight="529.0" fitWidth="424.0" layoutX="536.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true" />
         <Label alignment="CENTER" layoutX="193.0" layoutY="29.0" prefHeight="129.0" prefWidth="575.0" text="RPG Character Sheet">
             <font>
                 <Font name="Tlwg Typist Bold" size="44.0" />
@@ -18,6 +19,5 @@
          </font>
       </Button>
         <ChoiceBox fx:id="loadBox" layoutX="398.0" layoutY="315.0" prefHeight="39.0" prefWidth="203.0" />
-      <ImageView fx:id="nemeiah" fitHeight="347.0" fitWidth="317.0" layoutX="643.0" layoutY="233.0" pickOnBounds="true" preserveRatio="true" />
     </children>
 </Pane>

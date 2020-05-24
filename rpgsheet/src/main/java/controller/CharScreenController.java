@@ -14,21 +14,18 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.*;
 import javafx.stage.Stage;
 import org.tinylog.Logger;
 
-import javax.lang.model.type.ArrayType;
-import javax.swing.*;
-import java.awt.*;
 import java.io.IOException;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
 
 public class CharScreenController {
 
@@ -49,6 +46,18 @@ public class CharScreenController {
     private Label skillsTxf;
     @FXML
     private Label profLabel;
+    @FXML
+    private Label stat1;
+    @FXML
+    private Label stat2;
+    @FXML
+    private Label stat3;
+    @FXML
+    private Label stat4;
+    @FXML
+    private Label stat5;
+    @FXML
+    private Label stat6;
 
     @FXML
     private ChoiceBox<Enum> genderChoice;
@@ -57,12 +66,19 @@ public class CharScreenController {
     @FXML
     private ChoiceBox<Enum> raceChoice;
 
+    @FXML
+    private Button randomButton;
+    @FXML
+    private Button loadButton;
+
+
 
 
 
 
     /**
      * When initializing, builds elements of ChoiceBoxes and creates listener to update the page when changed.
+     * Also attempts loading icons from resources.
      */
     public void initialize() {
 
@@ -93,6 +109,18 @@ public class CharScreenController {
             }
         });
 
+
+        try{
+            loadButton.setGraphic(new ImageView( new Image(getClass().getResource("/img/diskette.png").toExternalForm())));
+            randomButton.setGraphic(new ImageView( new Image(getClass().getResource("/img/dice.png").toExternalForm())));
+            randomButton.setText("");
+            loadButton.setText("");
+            randomButton.setStyle("-fx-background-color: rgba(0,0,0,0) ;");
+            loadButton.setStyle("-fx-background-color: rgba(0,0,0,0) ;");
+        }catch (Exception e){
+            Logger.error("Icons could not be loaded. {}", e);
+        }
+
     }
 
     /**
@@ -103,6 +131,7 @@ public class CharScreenController {
 
         this.loadedCharName = loadCharName;
         ActiveChar = CharSaver.load(loadedCharName);
+
         refresh();
     }
 
@@ -136,10 +165,19 @@ public class CharScreenController {
 
         for (int i = 0; i < ActiveChar.getAbilities().size(); i++) {
             ActiveChar.getAbilities().get(i);
-
-
-
         }
+
+
+
+
+        stat1.setText(ActiveChar.getStats().get(0).getValue().toString());
+        stat2.setText(ActiveChar.getStats().get(1).getValue().toString());
+        stat3.setText(ActiveChar.getStats().get(2).getValue().toString());
+        stat4.setText(ActiveChar.getStats().get(3).getValue().toString());
+        stat5.setText(ActiveChar.getStats().get(4).getValue().toString());
+        stat6.setText(ActiveChar.getStats().get(5).getValue().toString());
+
+
 
         Logger.trace("Page refreshed.");
 

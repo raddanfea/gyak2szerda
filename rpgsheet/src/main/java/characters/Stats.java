@@ -12,14 +12,21 @@ import javax.xml.bind.annotation.XmlEnum;
 @Data
 public class Stats {
 
-    @Getter @Setter private String name;
-    @Getter @Setter private Integer value;
+    private String name;
+    private Integer value;
 
     public Stats() {}
 
     public Stats(String name, Integer value) {
         this.name = name;
         this.value = value;
+    }
+
+    public Integer getValue() {
+        return value;
+    }
+    public String getName() {
+        return name;
     }
 
     @XmlEnum

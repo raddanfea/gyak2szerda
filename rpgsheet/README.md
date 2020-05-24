@@ -20,3 +20,9 @@ Run with the following commands, from the project's root directory:
 Developed by:
 
 Rádi Dániel - alicornfeather
+
+Credits:
+
+* Icons made by Freepik from www.flaticon.com, Flaticon License
+
+* Loadscreen image created by alicornfeather.

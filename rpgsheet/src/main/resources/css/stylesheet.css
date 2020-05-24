@@ -1,8 +1,8 @@
 .root {
     -fx-accent: #1e74c6;
     -fx-focus-color: -fx-accent;
-    -fx-base: #373e43;
-    -fx-control-inner-background: derive(-fx-base, 35%);
+    -fx-base: #305b63;
+    -fx-control-inner-background: derive(-fx-base, 10%);
     -fx-control-inner-background-alt: -fx-control-inner-background ;
 }
 
@@ -79,6 +79,12 @@
     -fx-background-insets: 2 2 2 2 ;
 }
 
+#loadPane{
+    -fx-background-color: linear-gradient(#61a2b1,#396b75);
+}
+
+
+
 #backButton:hover {
     -fx-background-color: linear-gradient(#2A5058, #61a2b1);
 }
@@ -91,12 +97,14 @@
 #editorButton{
     -fx-background-radius: 15 15 0 0;
     -fx-background-insets: 2 2 0 0 ;
+    -fx-text-fill: white;
 }
 
 .choice-box .context-menu {
     -fx-background-color: rgba(47,79,79,0.9);
     -fx-background-radius: 15 15 15 15;
     -fx-background-insets: 2 2 2 2;
+    -fx-padding: 2 2 2 2;
 }
 .choice-box .menu-item:focused {
     -fx-background-color: lightgrey;

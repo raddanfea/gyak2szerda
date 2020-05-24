@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<characterBase name="Hal Schoen I">
+<characterBase name="Margherita Wolff 2">
     <level>15</level>
-    <race>Elf</race>
-    <age>122</age>
+    <race>Human</race>
+    <age>200</age>
     <gender>Male</gender>
     <rpgclass>Mage</rpgclass>
+    <abilities>false</abilities>
     <abilities>true</abilities>
     <abilities>false</abilities>
     <abilities>false</abilities>
-    <abilities>false</abilities>
-    <abilities>false</abilities>
+    <abilities>true</abilities>
     <abilities>false</abilities>
     <abilities>true</abilities>
     <abilities>true</abilities>
@@ -29,32 +29,34 @@
         </skill>
     </skills>
     <items>
-        <item>Starting Items,Use Comma for New Line</item>
+        <item>Starting Items</item>
+        <item>Use Comma for New Line</item>
+        <item>yoloism</item>
     </items>
     <stats>
         <stat>
             <name>Strength</name>
-            <value>12</value>
+            <value>10</value>
         </stat>
         <stat>
             <name>Dexterity</name>
-            <value>12</value>
+            <value>11</value>
         </stat>
         <stat>
             <name>Constitution</name>
-            <value>12</value>
+            <value>9</value>
         </stat>
         <stat>
             <name>Intelligence</name>
-            <value>11</value>
+            <value>13</value>
         </stat>
         <stat>
             <name>Wisdom</name>
-            <value>11</value>
+            <value>13</value>
         </stat>
         <stat>
             <name>Charisma</name>
-            <value>11</value>
+            <value>12</value>
         </stat>
     </stats>
 </characterBase>

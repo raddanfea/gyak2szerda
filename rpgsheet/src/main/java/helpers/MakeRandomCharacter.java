@@ -37,7 +37,7 @@ public class MakeRandomCharacter {
         ArrayList<Stats> statsbuffer = new ArrayList<>();
 
         for (Stats.Stattypes iteredtype : Stats.Stattypes.values()){
-            statsbuffer.add(new Stats(iteredtype.toString(),faker.number().numberBetween(-2,6)+10));
+            statsbuffer.add(new Stats(iteredtype.toString(),faker.number().numberBetween(1,7)+9));
         }
 
         ActiveChar.setStats(statsbuffer);
