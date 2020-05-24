@@ -8,6 +8,9 @@ import org.tinylog.Logger;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Creates a random RPG character using Faker and CharacterBase and returns it.
+ */
 public class MakeRandomCharacter {
 
     private Integer levelbuffer;

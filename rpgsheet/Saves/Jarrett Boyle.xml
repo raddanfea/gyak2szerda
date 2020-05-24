@@ -1,47 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<characterBase name="Sir hedvig The Great">
-    <level>20</level>
-    <race>Dwarf</race>
-    <age>30</age>
+<characterBase name="Jarrett Boyle">
+    <level>9</level>
+    <race>Human</race>
+    <age>81</age>
     <gender>Female</gender>
-    <rpgclass>Warrior</rpgclass>
-    <abilities>true true false true false true false false false true true</abilities>
+    <rpgclass>Mage</rpgclass>
+    <abilities>true true false true true true false false false false false</abilities>
     <skills>
         <skill>
-            <name>Warrior Skill 1</name>
+            <name>Mage Skill 1</name>
             <effect>Effect 1</effect>
         </skill>
         <skill>
-            <name>Warrior Skill 2</name>
+            <name>Mage Skill 2</name>
             <effect>Effect 2</effect>
         </skill>
         <skill>
-            <name>Warrior Skill 3</name>
+            <name>Mage Skill 3</name>
             <effect>Effect 3</effect>
         </skill>
         <skill>
-            <name>Warrior Skill 4</name>
+            <name>Mage Skill 4</name>
             <effect>Effect 4</effect>
         </skill>
         <skill>
-            <name>Warrior Skill 5</name>
+            <name>Mage Skill 5</name>
             <effect>Effect 5</effect>
-        </skill>
-        <skill>
-            <name>Warrior Skill 6</name>
-            <effect>Effect 6</effect>
-        </skill>
-        <skill>
-            <name>Warrior Skill 7</name>
-            <effect>Effect 7</effect>
-        </skill>
-        <skill>
-            <name>Warrior Skill 8</name>
-            <effect>Effect 8</effect>
-        </skill>
-        <skill>
-            <name>Warrior Skill 9</name>
-            <effect>Effect 9</effect>
         </skill>
     </skills>
     <items>
@@ -51,19 +35,19 @@
     <stats>
         <stat>
             <name>Strength</name>
-            <value>14</value>
+            <value>10</value>
         </stat>
         <stat>
             <name>Dexterity</name>
-            <value>14</value>
+            <value>15</value>
         </stat>
         <stat>
             <name>Constitution</name>
-            <value>13</value>
+            <value>12</value>
         </stat>
         <stat>
             <name>Intelligence</name>
-            <value>12</value>
+            <value>14</value>
         </stat>
         <stat>
             <name>Wisdom</name>
@@ -71,7 +55,7 @@
         </stat>
         <stat>
             <name>Charisma</name>
-            <value>13</value>
+            <value>14</value>
         </stat>
     </stats>
 </characterBase>

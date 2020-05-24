@@ -6,9 +6,6 @@ import javax.xml.bind.annotation.*;
 import lombok.Data;
 
 
-/**
- * Getter was inconsistent between different OS types, so I manually created getters.
- */
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(propOrder = {"name","level","race","age","gender","rpgclass", "abilities", "skills","items","stats"})

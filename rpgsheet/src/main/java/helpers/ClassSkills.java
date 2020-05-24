@@ -7,6 +7,10 @@ import org.tinylog.Logger;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * GetSkills creates an arraylist of skills based on RPGCLASS and LEVEL.
+ * SkillsToString Handles regex to display skills.
+ */
 public class ClassSkills {
     public static ArrayList<Skills> GetSkills(CharacterBase.Rpgclass whichclass, Integer level){
 

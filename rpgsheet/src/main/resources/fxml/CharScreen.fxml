@@ -59,7 +59,7 @@
             <Font name="Fira Code Regular" size="16.0" />
          </font>
       </Label>
-      <Label fx:id="profLabel" alignment="CENTER" layoutX="328.0" layoutY="200.0" prefHeight="37.0" prefWidth="64.0" text="+2">
+      <Label fx:id="profLabel" alignment="CENTER" layoutX="267.0" layoutY="187.0" prefHeight="37.0" prefWidth="64.0" text="+2">
          <font>
             <Font size="25.0" />
          </font>

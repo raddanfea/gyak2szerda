@@ -1,12 +1,10 @@
 package controller;
 
 import characters.CharacterBase;
-import com.sun.javafx.scene.control.Logging;
 import helpers.MakeRandomCharacter;
 import helpers.CharSaver;
 import helpers.CharacterSaveLogic;
 import helpers.ClassSkills;
-import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
@@ -26,7 +24,6 @@ import javafx.stage.Stage;
 import org.tinylog.Logger;
 
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -73,7 +70,7 @@ public class CharScreenController {
 
     /**
      * When initializing, builds elements of ChoiceBoxes and creates listener to update the page when changed.
-     * Also attempts loading icons from resources.
+     * Attempts loading icons from resources.
      */
     public void initialize() {
 
@@ -145,6 +142,8 @@ public class CharScreenController {
      * Skills are built with ClassSkills helper.
      * Items are a string regex.
      * Proficiency (profLabel) is one-way basic calculation, not saved in file.
+     * Stats stream to writes saved values to labels.
+     * CheckBox stream sets checkboxes to saved values.
      */
     public void refresh(){
 
@@ -156,10 +155,10 @@ public class CharScreenController {
         raceChoice.setValue(ActiveChar.getRace());
         skillsTxf.setText(ClassSkills.SkillsToString(ClassSkills.GetSkills(ActiveChar.getRpgclass(),ActiveChar.getLevel())));
         itemsTxf.setText(String.join(",", ActiveChar.getItems()).replace(",",",\n"));
-        profLabel.setText(new StringBuilder().append("+").append(2+ActiveChar.getLevel()/3).toString());
+        profLabel.setText("+" + (2 + ActiveChar.getLevel() / 3));
 
         List<Label> statsList = List.of(Str,Dex,Con,Int,Wis,Char);
-        statsList.parallelStream().forEach((StatsTemp) -> StatsTemp.setText(ActiveChar.getStats().get(statsList.indexOf(StatsTemp)).getValue().toString()));
+        statsList.stream().forEach((StatsTemp) -> StatsTemp.setText(ActiveChar.getStats().get(statsList.indexOf(StatsTemp)).getValue().toString()));
 
         List<CheckBox> checkBoxList = List.of(checkBox1,checkBox2,checkBox3,checkBox4,checkBox5,checkBox6,checkBox7,checkBox8,checkBox9,checkBox10,checkBox11);
         checkBoxList.parallelStream().forEach((AbilityTemp) -> AbilityTemp.setSelected(ActiveChar.getAbilities().get(checkBoxList.indexOf(AbilityTemp))));
@@ -207,23 +206,27 @@ public class CharScreenController {
 
         Logger.trace("Saving to memory.");
 
-        ActiveChar.setName(nameTxf.getText());
-        ActiveChar.setLevel(Integer.parseInt(levelTxf.getText()));
-        ActiveChar.setAge(Integer.parseInt(ageTxf.getText()));
-        ActiveChar.setGender(CharacterBase.Gender.valueOf(genderChoice.getValue().toString()));
-        ActiveChar.setRace(CharacterBase.Race.valueOf(raceChoice.getValue().toString()));
-        ActiveChar.setRpgclass(CharacterBase.Rpgclass.valueOf(classChoice.getValue().toString()));
-        ActiveChar.setSkills(ActiveChar.getSkillsList());
-        ActiveChar.setItems(Arrays.asList(itemsTxf.getText().replace("\n", "").split(",")));
-        ActiveChar.setStats(ActiveChar.getStats());
-        ActiveChar.setAbilities(ActiveChar.getAbilities());
+        try {
+            ActiveChar.setName(nameTxf.getText());
+            ActiveChar.setLevel(Integer.parseInt(levelTxf.getText()));
+            ActiveChar.setAge(Integer.parseInt(ageTxf.getText()));
+            ActiveChar.setGender(CharacterBase.Gender.valueOf(genderChoice.getValue().toString()));
+            ActiveChar.setRace(CharacterBase.Race.valueOf(raceChoice.getValue().toString()));
+            ActiveChar.setRpgclass(CharacterBase.Rpgclass.valueOf(classChoice.getValue().toString()));
+            ActiveChar.setSkills(ActiveChar.getSkillsList());
+            ActiveChar.setItems(Arrays.asList(itemsTxf.getText().replace("\n", "").split(",")));
+            ActiveChar.setStats(ActiveChar.getStats());
+            ActiveChar.setAbilities(ActiveChar.getAbilities());
+        }catch(Exception e){Logger.error("Error while saving to memory. Invalid inputs? {}",e);}
         refresh();
     }
 
+    /**
+     * @param event Detects checkbox changes and saves them to memory.
+     */
     @FXML
     private void handleCheckBoxAction(ActionEvent event) {
         CheckBox operatorPressed = ((CheckBox) event.getSource());
-
         List<CheckBox> checkBoxList = List.of(checkBox1,checkBox2,checkBox3,checkBox4,checkBox5,checkBox6,checkBox7,checkBox8,checkBox9,checkBox10,checkBox11);
         ArrayList<Boolean> CharTemp = ActiveChar.getAbilities();
         CharTemp.set(checkBoxList.indexOf(operatorPressed),operatorPressed.selectedProperty().getValue());

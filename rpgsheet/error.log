@@ -36,3 +36,8 @@ ERROR: Last Save is missing, therefore returning a random character.
 ERROR: Character Saves/null.xml not loaded because it could no be found.
 2020-05-24 18:02:16 [JavaFX Application Thread] helpers.CharSaver.load()
 ERROR: Last Save is missing, therefore returning a random character.
+2020-05-24 18:45:25 [JavaFX Application Thread] controller.CharScreenController.refreshTemp()
+ERROR: Error while saving to memory. Invalid inputs? java.lang.NumberFormatException: For input string: "10s"
+2020-05-24 18:45:41 [JavaFX Application Thread] helpers.CharacterSaveLogic.SaveLogic()
+ERROR: CharacterSaveLogic Failed. Invalid Values?
+java.lang.NumberFormatException: For input string: "asd"

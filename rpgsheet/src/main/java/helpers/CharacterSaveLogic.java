@@ -9,6 +9,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Function that helps during the saving process.
+ * Takes input from the controller, formats data and passes it forward as a single object to the CharSaver function.
+ */
 public class CharacterSaveLogic {
     public static void SaveLogic(String nametosave,
                                  String leveltosave,

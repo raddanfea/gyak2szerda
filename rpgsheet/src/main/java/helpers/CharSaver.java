@@ -8,6 +8,11 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 
+/**
+ * Function that builds filename and path.
+ * Checks for bugs and tries to resolve them during loading and saving.
+ * Uses JAXBHelper to marshall.
+ */
 public class CharSaver{
 
     private static String folder = "Saves/";
