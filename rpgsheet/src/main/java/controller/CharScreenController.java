@@ -55,6 +55,7 @@ public class CharScreenController {
 
     @FXML private Button randomButton;
     @FXML private Button loadButton;
+    @FXML private Button backButton;
 
     @FXML private CheckBox checkBox1;
     @FXML private CheckBox checkBox2;
@@ -75,45 +76,39 @@ public class CharScreenController {
     public void initialize() {
 
         raceChoice.getItems().addAll(CharacterBase.Race.values());
-        raceChoice.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
-            @Override
-            public void changed(ObservableValue<? extends Number> observableValue, Number number, Number number2) {
-                ActiveChar.setRace(CharacterBase.Race.valueOf(raceChoice.getItems().get((Integer) number2).toString()));
-                refresh();
-            }
-        });
-
-        genderChoice.getItems().addAll(CharacterBase.Gender.values());
-        genderChoice.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
-            @Override
-            public void changed(ObservableValue<? extends Number> observableValue, Number number, Number number2) {
-                ActiveChar.setGender(CharacterBase.Gender.valueOf(genderChoice.getItems().get((Integer) number2).toString()));
-                refresh();
-            }
-        });
-
         classChoice.getItems().addAll(CharacterBase.Rpgclass.values());
-        classChoice.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
-            @Override
-            public void changed(ObservableValue<? extends Number> observableValue, Number number, Number number2) {
-                ActiveChar.setRpgclass(CharacterBase.Rpgclass.valueOf(classChoice.getItems().get((Integer) number2).toString()));
-                refresh();
-            }
+        genderChoice.getItems().addAll(CharacterBase.Gender.values());
+
+        raceChoice.getSelectionModel().selectedIndexProperty().addListener((observableValue, number, number2) -> {
+            ActiveChar.setRace(CharacterBase.Race.valueOf(raceChoice.getItems().get((Integer) number2).toString()));
+            refresh();
+        });
+        genderChoice.getSelectionModel().selectedIndexProperty().addListener((observableValue, number, number2) -> {
+            ActiveChar.setGender(CharacterBase.Gender.valueOf(genderChoice.getItems().get((Integer) number2).toString()));
+            refresh();
+        });
+        classChoice.getSelectionModel().selectedIndexProperty().addListener((observableValue, number, number2) -> {
+            ActiveChar.setRpgclass(CharacterBase.Rpgclass.valueOf(classChoice.getItems().get((Integer) number2).toString()));
+            refresh();
         });
 
 
         try{
             loadButton.setGraphic(new ImageView( new Image(getClass().getResource("/img/diskette.png").toExternalForm())));
             randomButton.setGraphic(new ImageView( new Image(getClass().getResource("/img/dice.png").toExternalForm())));
+            backButton.setGraphic(new ImageView( new Image(getClass().getResource("/img/arrow.png").toExternalForm())));
             randomButton.setText("");
             loadButton.setText("");
-            randomButton.setStyle("-fx-background-color: rgba(0,0,0,0) ;");
-            loadButton.setStyle("-fx-background-color: rgba(0,0,0,0) ;");
+            backButton.setText("");
+            String hideShape = "-fx-background-color: rgba(0,0,0,0);";
+            randomButton.setStyle(hideShape);
+            loadButton.setStyle(hideShape);
+            backButton.setStyle(hideShape);
         }catch (Exception e){
             Logger.error("Icons could not be loaded. {}", e);
         }
-
     }
+
 
     /**
      * Catches savefile name from the loading screen then loads it.

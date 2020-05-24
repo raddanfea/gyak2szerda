@@ -32,7 +32,6 @@ public class ClassSkills {
                 }
                 if(level > 15){
                     skills.add(new Skills("Warrior Skill 8", "Effect 8"));
-                    skills.add(new Skills("Warrior Skill 9", "Effect 9"));
                 }
                 break;
             case "Mage":
@@ -49,7 +48,6 @@ public class ClassSkills {
                 }
                 if(level > 15){
                     skills.add(new Skills("Mage Skill 8", "Effect 8"));
-                    skills.add(new Skills("Mage Skill 9", "Effect 9"));
                 }
                 break;
             default:
